@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: Terra Nanotech WordPress Theme 0.0.1\n"
 "Report-Msgid-Bugs-To: https://github.com/terra-nanotech/tn-nt-wordpress-theme/issues\n"
 "POT-Creation-Date: 2026-07-21T16:56:45+00:00\n"
-"PO-Revision-Date: 2026-07-21 16:57+0000\n"
+"PO-Revision-Date: 2026-07-21 17:15+0000\n"
 "Last-Translator: Peter Pfeufer <info@ppfeufer.de>\n"
 "Language-Team: German <https://weblate.ppfeufer.de/projects/wordpress-themes/terra-nanotech-wordpress-theme/de/>\n"
 "Language: de_DE\n"
@@ -31,7 +31,7 @@ msgstr "https://github.com/terra-nanotech/tn-nt-wordpress-theme"
 #. Description of the theme
 #: style.css:4
 msgid "WordPress Theme for Terra Nanotech"
-msgstr "WordPress Theme für Terra Nanotech"
+msgstr "WordPress Theme für die EVE Online Corporation Terra Nanotech"
 
 #. Author of the theme
 #: style.css:6
