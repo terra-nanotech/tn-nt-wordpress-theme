@@ -1,0 +1,1 @@
+{"version":3,"sources":["plugin-styles.css"],"names":[],"mappings":"AAAA,A,WACI,I,CACI,W","file":"plugin-styles.css","sourcesContent":["@media all {\n    .foo {\n        color: red;\n    }\n}\n"]}
