@@ -6,6 +6,7 @@
 # Theme information
 theme_name = Terra Nanotech WordPress Theme
 theme_slug = tn-nt-wordpress-theme
+text-domain = terra-nanotech
 
 # Git repository URLs
 theme_repo_url = https://github.com/terra-nanotech/tn-nt-wordpress-theme

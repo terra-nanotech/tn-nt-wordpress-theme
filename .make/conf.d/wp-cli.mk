@@ -29,9 +29,9 @@ deactivate-theme:
 pot:
 	@$(wp_cli) i18n make-pot \
 		. \
-		l10n/$(theme_slug).pot \
-		--slug=$(theme_slug) \
-		--domain=$(theme_slug) \
+		l10n/$(text-domain).pot \
+		--slug=$(text-domain) \
+		--domain=$(text-domain) \
 		--headers='{"Report-Msgid-Bugs-To":"$(theme_issues_url)"}' \
 		--include="/"
 
