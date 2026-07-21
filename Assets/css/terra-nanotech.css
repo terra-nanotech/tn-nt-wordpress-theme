@@ -1,0 +1,51 @@
+@media all {
+    body {
+        background-image: var(--website-background-image);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        color: var(--text-color);
+        font-family: var(--font-family);
+        line-height: var(--line-height);
+    }
+
+    .blur-background {
+        backdrop-filter: var(--backdrop-filter-default);
+        height: 100%;
+        left: 0;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: -1;
+    }
+
+    .grid-container {
+        max-width: 1680px;
+    }
+
+    .main-navigation {
+        background-color: transparent;
+    }
+
+    .site-header {
+        background-color: var(--bg-white-transparent);
+    }
+
+    .separate-containers .inside-article,
+    .separate-containers .comments-area,
+    .separate-containers .page-header,
+    .one-container .container,
+    .separate-containers .paging-navigation,
+    .inside-page-header {
+        background-color: var(--bg-white-transparent);
+    }
+
+    .sidebar .widget {
+        background-color: var(--bg-white-transparent);
+    }
+
+    .site-info {
+        background-color: var(--bg-white-transparent);
+    }
+}

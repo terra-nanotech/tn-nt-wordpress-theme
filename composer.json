@@ -1,0 +1,53 @@
+{
+    "name": "terra-nanotech/tn-nt-wordpress-theme",
+    "description": "WordPress Theme for the Terra Nanotech website",
+    "authors": [
+        {
+            "name": "Peter Pfeufer",
+            "email": "info@ppfeufer.de"
+        }
+    ],
+    "require": {
+        "yahnis-elsts/plugin-update-checker": "^5.7"
+    },
+    "require-dev": {
+        "wp-cli/wp-cli-bundle": "^2.12",
+        "squizlabs/php_codesniffer": "^4.0",
+        "brianhenryie/strauss": "=0.21.1"
+    },
+    "extra": {
+        "strauss": {
+            "target_directory": "Sources/Libs",
+            "namespace_prefix": "TerraNanotech\\Theme\\TerraNanotech\\Libs\\",
+            "include_modified_date": false,
+            "include_author": false
+        }
+    },
+    "scripts": {
+        "strauss": [
+            "Composer\\Config::disableProcessTimeout",
+            "vendor/bin/strauss",
+            "composer dump-autoload"
+        ],
+        "post-install-cmd": [
+            "@strauss"
+        ],
+        "post-update-cmd": [
+            "@strauss"
+        ]
+    },
+    "config": {
+        "preferred-install": "dist",
+        "classmap-authoritative": true,
+        "optimize-autoloader": true,
+        "sort-packages": true
+    },
+    "autoload": {
+        "psr-4": {
+            "TerraNanotech\\Theme\\TerraNanotech\\": "Sources"
+        },
+        "classmap": [
+            "vendor"
+        ]
+    }
+}
