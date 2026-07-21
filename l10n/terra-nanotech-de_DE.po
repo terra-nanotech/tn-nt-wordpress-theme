@@ -14,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Weblate 2026.7.1\n"
-"X-Domain: tn-nt-wordpress-theme\n"
+"X-Domain: terra-nanotech\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Loco-Version: 2.8.7; wp-7.1-beta2-62808; php-8.3.32\n"
 
