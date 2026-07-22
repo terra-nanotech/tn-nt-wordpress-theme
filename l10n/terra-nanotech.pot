@@ -1,5 +1,5 @@
 # Copyright (C) 2026 H. Peter Pfeufer
-# This file is distributed under the GNU General Public License v3.0.
+# This file is distributed under the GNU General Public License v3.0 or later.
 msgid ""
 msgstr ""
 "Project-Id-Version: Terra Nanotech WordPress Theme 0.0.1\n"
@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-07-21T16:56:45+00:00\n"
+"POT-Creation-Date: 2026-07-22T10:58:50+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: terra-nanotech\n"
@@ -26,7 +26,7 @@ msgstr ""
 
 #. Description of the theme
 #: style.css:4
-msgid "WordPress Theme for Terra Nanotech"
+msgid "WordPress Theme for the EVE Online corporation Terra Nanotech"
 msgstr ""
 
 #. Author of the theme
