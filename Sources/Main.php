@@ -75,6 +75,7 @@ class Main {
     private function getClassesToLoad(): array {
         return [
             AssetLoader::class, // Load assets
+            Tweaks\WesiteLogo::class, // Favicons
 //            Plugins\Shortcodes::class, // Theme shortcodes
 //            Tweaks\DnsPrefetch::class, // Disable DNS prefetch
 //            Tweaks\Favicon::class, // Favicons
