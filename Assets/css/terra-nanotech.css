@@ -20,10 +20,6 @@
         z-index: -1;
     }
 
-    .grid-container {
-        max-width: 1680px;
-    }
-
     .main-navigation {
         background-color: transparent;
     }
