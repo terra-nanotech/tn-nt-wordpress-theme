@@ -42,6 +42,20 @@ jQuery(document).ready(($) => {
         $('<div class="blur-background"></div>').prependTo('body');
     };
 
-    injectBlurBodyBackground();
-    externalLinks();
+    /**
+     * Functions that need to be executed on successful ajax events.
+     */
+    $(document).ajaxSuccess(() => {
+        externalLinks();
+    });
+
+    /**
+     * Functions that need to be executed when the page is loaded.
+     */
+    (() => {
+        injectBlurBodyBackground();
+        externalLinks();
+
+        console.log('Terra Nanotech JS: Loaded');
+    })();
 });
