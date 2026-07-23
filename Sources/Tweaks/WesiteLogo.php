@@ -22,7 +22,10 @@ class WesiteLogo {
     private function overrideWebsiteLogo(): void {
         // Override the website logo title
         add_filter('generate_logo_title', static function (string $title): string {
-            return 'Terra Nanotech - EVE Online Corporation';
+            return esc_html__(
+                'Terra Nanotech - An EVE Online Corporation',
+                'terra-nanotech'
+            );
         });
 
         // Override the website logo URL
@@ -41,6 +44,10 @@ class WesiteLogo {
                 'class' => 'header-image is-logo-image',
                 'src' => esc_url($logo_url),
                 'alt' => esc_attr(apply_filters(
+                    'generate_logo_title',
+                    get_bloginfo('name', 'display')
+                )),
+                'title' => esc_attr(apply_filters(
                     'generate_logo_title',
                     get_bloginfo('name', 'display')
                 )),
