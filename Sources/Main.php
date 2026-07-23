@@ -76,6 +76,7 @@ class Main {
         return [
             AssetLoader::class, // Load assets
             Overrides\WesiteLogo::class, // Website logo overrides
+            Overrides\WebsiteFooter::class, // Website footer overrides
         ];
     }
 }
