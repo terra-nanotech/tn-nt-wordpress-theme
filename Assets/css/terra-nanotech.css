@@ -6,7 +6,7 @@
         background-size: cover;
         background-attachment: fixed;
         color: var(--text-color);
-        font-family: var(--font-family);
+        font-family: var(--font-family), serif;
         line-height: var(--line-height);
     }
 
