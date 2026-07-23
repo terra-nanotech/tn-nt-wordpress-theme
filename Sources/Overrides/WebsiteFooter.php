@@ -41,7 +41,7 @@ class WebsiteFooter {
             // translators: %1$s is the name and the link to the copyright holder (Fenris Creations - https://www.fenriscreations.com/), which will be replaced automatically at runtime.
             __('All EVE-related materials are the property of %1$s.', 'terra-nanotech'),
             sprintf(
-                '<a href="%1$s" target="_blank" referrerpolicy="no-referrer">Fenris Creations</a>',
+                '<a class="external-link" href="%1$s" target="_blank" rel="noreferrer noopener" referrerpolicy="no-referrer">Fenris Creations</a>',
                 esc_url('https://www.fenriscreations.com/')
             )
         );
