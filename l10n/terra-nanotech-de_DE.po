@@ -5,8 +5,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Terra Nanotech WordPress Theme 0.0.1\n"
 "Report-Msgid-Bugs-To: https://github.com/terra-nanotech/tn-nt-wordpress-theme/issues\n"
-"POT-Creation-Date: 2026-07-21T16:56:45+00:00\n"
-"PO-Revision-Date: 2026-07-21 17:15+0000\n"
+"POT-Creation-Date: 2026-07-23T10:58:09+00:00\n"
+"PO-Revision-Date: 2026-07-23 10:51+0000\n"
 "Last-Translator: Peter Pfeufer <info@ppfeufer.de>\n"
 "Language-Team: German <https://weblate.ppfeufer.de/projects/wordpress-themes/terra-nanotech-wordpress-theme/de/>\n"
 "Language: de_DE\n"
@@ -30,7 +30,7 @@ msgstr "https://github.com/terra-nanotech/tn-nt-wordpress-theme"
 
 #. Description of the theme
 #: style.css:4
-msgid "WordPress Theme for Terra Nanotech"
+msgid "WordPress Theme for the EVE Online corporation Terra Nanotech"
 msgstr "WordPress Theme für die EVE Online Corporation Terra Nanotech"
 
 #. Author of the theme
@@ -42,3 +42,13 @@ msgstr "H. Peter Pfeufer"
 #: style.css:7
 msgid "https://terra-nanotech.de"
 msgstr "https://terra-nanotech.de"
+
+#. translators: %1$s is the name and the link to the copyright holder (Fenris Creations - https://www.fenriscreations.com/), which will be replaced automatically at runtime.
+#: Sources/Overrides/WebsiteFooter.php:42
+#, php-format
+msgid "All EVE-related materials are the property of %1$s."
+msgstr "Alle EVE-bezogenen Materialien sind Eigentum von %1$s."
+
+#: Sources/Overrides/WesiteLogo.php:25
+msgid "Terra Nanotech - An EVE Online Corporation"
+msgstr "Terra Nanotech - Eine EVE Online Corporation"
