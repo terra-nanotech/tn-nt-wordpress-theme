@@ -75,13 +75,7 @@ class Main {
     private function getClassesToLoad(): array {
         return [
             AssetLoader::class, // Load assets
-            Tweaks\WesiteLogo::class, // Favicons
-//            Plugins\Shortcodes::class, // Theme shortcodes
-//            Tweaks\DnsPrefetch::class, // Disable DNS prefetch
-//            Tweaks\Favicon::class, // Favicons
-//            Tweaks\OpenGraph::class, // Open Graph
-//            Tweaks\SearchUrl::class, // Search URL modifications
-//            Tweaks\Theme::class // Theme Tweaks
+            Overrides\WesiteLogo::class, // Website logo overrides
         ];
     }
 }

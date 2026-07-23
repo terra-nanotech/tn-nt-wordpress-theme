@@ -1,6 +1,6 @@
 <?php
 
-namespace TerraNanotech\Theme\TerraNanotech\Tweaks;
+namespace TerraNanotech\Theme\TerraNanotech\Overrides;
 
 class WesiteLogo {
     /**
