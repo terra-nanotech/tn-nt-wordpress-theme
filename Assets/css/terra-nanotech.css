@@ -8,6 +8,7 @@
         color: var(--text-color);
         font-family: var(--font-family), serif;
         line-height: var(--line-height);
+        padding-top: 2rem;
     }
 
     .blur-background {
@@ -43,5 +44,9 @@
 
     .site-info {
         background-color: var(--bg-white-transparent);
+    }
+
+    .site-footer {
+        padding-bottom: 2rem;
     }
 }
