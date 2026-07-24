@@ -1,5 +1,9 @@
 name: Checks
 
+env:
+  NODE_VERSION: 26 # [LTS] End of Life: 30 Apr 2029 (https://endoflife.date/nodejs)
+#  PYTHON_VERSION: 3.13 # End of Life: 31 Oct 2029 (https://endoflife.date/python)
+
 on:
   push:
     branches:
@@ -30,16 +34,18 @@ jobs:
 #        with:
 #          composer-options: install --no-dev --no-interaction --no-progress --no-suggest --optimize-autoloader --classmap-authoritative
 
-      - name: Set up Python
-        uses: actions/setup-python@v7
-        with:
-          python-version: '3.11'
-          check-latest: true
+#      - name: Set up Python
+#        uses: actions/setup-python@v7
+#        with:
+#          python-version: ${{ env.PYTHON_VERSION }}
+#          check-latest: true
 
       - name: Setup Node.js
         uses: actions/setup-node@v7
         with:
-          node-version: '20'
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+          cache-dependency-path: 'package-lock.json'
       - run: npm install
 
       - name: Run Pre Commit Checks

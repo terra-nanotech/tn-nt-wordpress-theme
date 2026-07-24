@@ -6,7 +6,7 @@
 # Set the default language versions for the hooks
 default_language_version:
   python: python3  # Force all Python hooks to use Python 3
-  node: 22.13.1  # Force all Node hooks to use the latest Node LTS
+  node: 26.3.0  # Force all Node hooks to use this specific Node version
 
 # https://pre-commit.ci/
 ci:
@@ -113,8 +113,10 @@ repos:
           - --colors
           - --report=full
 
-  - repo: https://github.com/eslint/eslint
-    rev: v9.39.2
+#  - repo: https://github.com/eslint/eslint
+#    rev: 9089853a593d6c7c0f11367da08a829e0ddfe092  # frozen: v10.6.0
+  - repo: https://github.com/pre-commit/mirrors-eslint
+    rev: 8763fc929b6232999d541a3d8eb49965a6b71afb  # frozen: v10.6.0
     hooks:
       - id: eslint
         name: ESLint
@@ -122,8 +124,8 @@ repos:
         language: node
         additional_dependencies:
           # eslint itself needs to be here when using additional_dependencies.
-          - eslint@9.39.2 # https://github.com/eslint/eslint/releases/latest
-          - globals@17.0.0  # https://github.com/sindresorhus/globals/releases/latest
+          - eslint@10.6.0 # https://github.com/eslint/eslint/releases/latest
+          - globals@17.7.0 # https://github.com/sindresorhus/globals/releases/latest
 
   - repo: https://github.com/thibaudcolas/pre-commit-stylelint
     rev: 5550a364f2b5d3a9e731a9f4e231c5dc8c5f2e5b  # frozen: v16.26.1
