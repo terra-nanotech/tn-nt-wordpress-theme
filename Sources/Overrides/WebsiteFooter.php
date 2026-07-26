@@ -41,7 +41,10 @@ class WebsiteFooter {
             // translators: %1$s is the name and the link to the copyright holder (Fenris Creations - https://www.fenriscreations.com/), which will be replaced automatically at runtime.
             __('All EVE-related materials are the property of %1$s.', 'terra-nanotech'),
             sprintf(
-                '<a href="%1$s">Fenris Creations</a>',
+                wp_kses(
+                    '<a href="%1$s">Fenris Creations</a>',
+                    ['a' => ['href' => []]]
+                ),
                 esc_url('https://www.fenriscreations.com/')
             )
         );
