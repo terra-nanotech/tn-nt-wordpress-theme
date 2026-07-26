@@ -51,7 +51,7 @@ class Main {
      */
     public function loadTextDomain(): void {
         load_child_theme_textdomain(
-            domain: 'terra-nanotech',
+            domain: THEME_SLUG,
             path: THEME_DIRECTORY . '/l10n'
         );
     }

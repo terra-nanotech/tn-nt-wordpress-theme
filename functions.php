@@ -46,7 +46,7 @@ define(
 );
 
 // Theme slug
-const THEME_SLUG = 'tn-nt-wordpress-theme';
+const THEME_SLUG = 'terra-nanotech';
 
 // Theme Sources directory (without trailing slash)
 const THEME_SOURCES_DIRECTORY = THEME_DIRECTORY . '/Sources';
@@ -55,7 +55,7 @@ const THEME_SOURCES_DIRECTORY = THEME_DIRECTORY . '/Sources';
 const THEME_LIBRARY_DIRECTORY = THEME_SOURCES_DIRECTORY . '/Libs';
 
 // Theme GitHub URI
-const THEME_GITHUB_URI = 'https://github.com/ppfeufer/' . THEME_SLUG . '/';
+const THEME_GITHUB_URI = 'https://github.com/terra-nanotech/tn-nt-wordpress-theme';
 // phpcs:enable
 
 // Include the theme autoloader
