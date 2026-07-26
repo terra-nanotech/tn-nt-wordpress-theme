@@ -70,7 +70,7 @@ class WesiteLogo {
             return sprintf(
                 '<div class="site-logo">
                     <a href="%1$s" rel="home" aria-label="%2$s">
-                        <img%3$s />
+                        <img%3$s>
                     </a>
                 </div>',
                 esc_url(home_url('/')),
