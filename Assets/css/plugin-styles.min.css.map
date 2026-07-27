@@ -1,1 +1,1 @@
-{"version":3,"sources":["plugin-styles.css"],"names":[],"mappings":"AAAA,A,WACI,I,CACI,W","file":"plugin-styles.css","sourcesContent":["@media all {\n    .foo {\n        color: red;\n    }\n}\n"]}
+{"version":3,"sourceRoot":"","sources":["plugin-styles.css"],"names":[],"mappings":"AAEA,WACI,sCACI,6BACA,wCACA,yCAEA,KACI,gBACA,wBAGJ,mBACI,yCACA,mBACA,mBACA,WACA,eAEA,aACI,oDAEA,IACI,cACA,cACA,mBAGJ,YACI,kDAIR,4CAEI,wBACA,qBAGJ,gDAEI,wBAGJ,YACI,aAEA,4DAEI,2BACA,6CACA,mBACA,wCACA,WACA,qBACA,kBACA,oBAIR,gEAEI","file":"plugin-styles.min.css"}
