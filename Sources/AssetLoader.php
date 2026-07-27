@@ -38,6 +38,12 @@ class AssetLoader {
      */
     public function loadStyles(): void {
         wp_enqueue_style(
+            handle: 'brealpoints-detection',
+            src: get_theme_file_uri(file: '/Assets/libs/bootstrap-toolkit/2.6.3/css/breakpoints.min.css'),
+            deps: ['generate-style'],
+            ver: THEME_VERSION
+        );
+        wp_enqueue_style(
             handle: 'terra-nanotech-theme-style-defaults',
             src: get_theme_file_uri(file: '/Assets/css/defaults.min.css'),
             deps: ['generate-style'],
@@ -65,9 +71,31 @@ class AssetLoader {
      */
     public function loadScripts(): void {
         wp_enqueue_script(
+            handle: 'breakpoints-detection',
+            src: get_theme_file_uri(file: '/Assets/libs/bootstrap-toolkit/2.6.3/js/bootstrap-toolkit.min.js'),
+            deps: ['jquery'],
+            ver: THEME_VERSION,
+            args: [
+                'in_footer' => true,
+                'strategy' => 'async'
+            ]
+        );
+
+        wp_enqueue_script(
+            handle: 'stickyjs',
+            src: get_theme_file_uri(file: '/Assets/libs/stickyjs/1.0.4/jquery.sticky.min.js'),
+            deps: ['jquery'],
+            ver: THEME_VERSION,
+            args: [
+                'in_footer' => true,
+                'strategy' => 'async'
+            ]
+        );
+
+        wp_enqueue_script(
             handle: 'ppfeufer',
             src: get_theme_file_uri(file: '/Assets/javascript/terra-nanotech.min.js'),
-            deps: ['jquery'],
+            deps: ['breakpoints-detection', 'stickyjs'],
             ver: THEME_VERSION,
             args: [
                 'in_footer' => true,

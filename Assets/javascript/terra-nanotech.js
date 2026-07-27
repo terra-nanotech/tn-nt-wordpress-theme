@@ -1,3 +1,5 @@
+/* global ResponsiveBootstrapToolkit */
+
 jQuery(document).ready(($) => {
     'use strict';
 
@@ -35,6 +37,24 @@ jQuery(document).ready(($) => {
         });
     };
 
+    const fixStickyMenu = (device) => {
+        const $siteHeader = $('header.site-header');
+
+        if (device === 'desktop') {
+            $siteHeader
+                .addClass('site-header-desktop')
+                .sticky({
+                    topSpacing: 0,
+                    zIndex: 10,
+                    getWidthFrom: 'body',
+                    responsiveWidth: true
+                })
+                .sticky('update');
+        } else {
+            $siteHeader.removeClass('site-header-desktop').unstick();
+        }
+    };
+
     /**
      * Inject a blurred background to the body.
      */
@@ -58,4 +78,34 @@ jQuery(document).ready(($) => {
 
         console.log('Terra Nanotech JS: Loaded');
     })();
+
+    /**
+     * Functions that need to be executed when the viewport changes (e.g., when the browser is resized).
+     */
+    (($, viewport) => {
+        const getDevice = () => (
+            ['xs', 'sm'].includes(viewport.current()) ? 'mobile' : 'desktop'
+        );
+
+        let activeDevice = null;
+
+        const syncStickyMenu = () => {
+            const nextDevice = getDevice();
+
+            // Only reconfigure sticky when device mode actually changes.
+            if (nextDevice === activeDevice) {
+                return;
+            }
+
+            activeDevice = nextDevice;
+            fixStickyMenu(nextDevice);
+        };
+
+        syncStickyMenu();
+
+        // Trigger on viewport change to ensure the sticky menu is configured correctly on page load.
+        $(window).resize(viewport.changed(() => {
+            syncStickyMenu();
+        }, 1));
+    })(jQuery, ResponsiveBootstrapToolkit);
 });
