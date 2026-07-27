@@ -66,3 +66,72 @@
         }
     }
 }
+
+/* Meta Slider Plugin
+----------------------------------------------------------------------------- */
+@media all {
+    .meta-slider {
+        margin-top: 1rem;
+    }
+
+    .flex-direction-nav {
+        .flex-prev {
+            /* left: 0 !important; */
+        }
+
+        .flex-next {
+            /* right: 0 !important; */
+        }
+    }
+
+    .metaslider {
+        .caption-wrap {
+            top: 0;
+            bottom: initial !important;
+            opacity: 0.5 !important;
+            color: rgb(200 200 200);
+        }
+
+        .caption {
+            padding: 0.625rem !important;
+        }
+
+        .flexslider {
+            margin: 0 !important;
+        }
+    }
+
+    .flex-control-nav {
+        bottom: 0.625rem !important;
+        z-index: 99 !important;
+    }
+
+    .flex-control-paging {
+        li {
+            a {
+                background: rgb(255 255 255 / 50%) !important;
+                box-shadow: 0 0 3px rgb(255 255 255 / 30%) !important;
+            }
+
+            a.flex-active {
+                background: rgb(255 255 255 / 90%) !important;
+            }
+        }
+    }
+
+    .coin-slider {
+        width: 100% !important;
+        max-width: 1680px;
+        overflow: hidden;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+
+        img {
+            width: 100% !important;
+            height: auto;
+            max-width: 1680px;
+        }
+    }
+}

@@ -23,10 +23,10 @@ class AssetLoader {
             callback: [$this, 'loadScripts'],
             priority: 9999
         );
-//        add_action(
-//            hook_name: 'admin_enqueue_scripts',
-//            callback: [$this, 'loadAdminStyles']
-//        );
+        add_action(
+            hook_name: 'admin_enqueue_scripts',
+            callback: [$this, 'loadAdminStyles']
+        );
 //        add_action(hook_name: 'wp_footer', callback: [$this, 'loadSvgSprite']);
     }
 
@@ -82,13 +82,13 @@ class AssetLoader {
      * @return void
      * @access public
      */
-//    public function loadAdminStyles(): void {
-//        wp_enqueue_style(
-//            handle: 'terra-nanotech-admin-style',
-//            src: get_theme_file_uri(file: '/Assets/css/admin-style.min.css'),
-//            ver: THEME_VERSION
-//        );
-//    }
+    public function loadAdminStyles(): void {
+        wp_enqueue_style(
+            handle: 'terra-nanotech-admin-style',
+            src: get_theme_file_uri(file: '/Assets/css/admin-style.min.css'),
+            ver: THEME_VERSION
+        );
+    }
 
     /**
      * Add SVG-Sprite to footer hook
