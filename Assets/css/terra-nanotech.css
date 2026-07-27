@@ -33,7 +33,8 @@
         .inside-article,
         .comments-area,
         .page-header,
-        .paging-navigation {
+        .paging-navigation,
+        .meta-slider {
             background-color: var(--bg-white-transparent);
         }
     }

@@ -3,6 +3,7 @@
 namespace TerraNanotech\Theme\TerraNanotech;
 
 use TerraNanotech\Theme\TerraNanotech\Libs\YahnisElsts\PluginUpdateChecker\v5p7\PucFactory;
+use TerraNanotech\Theme\TerraNanotech\Plugins\Metaslider;
 
 class Main {
     /**
@@ -78,6 +79,7 @@ class Main {
             Overrides\WesiteLogo::class, // Website logo overrides
             Overrides\WebsiteFooter::class, // Website footer overrides
             Plugins\ChildpageMenu::class, // Childpage menu plugin
+            Plugins\Metaslider::class, // Metaslider plugin
         ];
     }
 }
