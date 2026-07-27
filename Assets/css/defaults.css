@@ -1,8 +1,8 @@
 :root {
-    --backdrop-filter-default: saturate(1.5) blur(1.5em);
-    --bg-white-transparent: rgb(255 255 255 / 80%);
+    --website-background-image: url("https://auth.terra-nanotech.de/static/tnnt_templates/images/background.jpg");
     --text-color: rgb(51 51 51);
     --font-family: amethysta, serif;
+    --backdrop-filter-default: saturate(1.5) blur(1.5em);
     --line-height: 1.71428;
-    --website-background-image: url("https://auth.terra-nanotech.de/static/tnnt_templates/images/background.jpg");
+    --bg-white-transparent: rgb(255 255 255 / 80%);
 }
