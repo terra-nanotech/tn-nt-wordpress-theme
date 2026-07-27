@@ -77,6 +77,7 @@ class Main {
             AssetLoader::class, // Load assets
             Overrides\WesiteLogo::class, // Website logo overrides
             Overrides\WebsiteFooter::class, // Website footer overrides
+            Plugins\ChildpageMenu::class, // Childpage menu plugin
         ];
     }
 }

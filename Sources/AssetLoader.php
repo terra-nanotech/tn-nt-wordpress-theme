@@ -49,12 +49,12 @@ class AssetLoader {
             deps: ['terra-nanotech-theme-style-defaults'],
             ver: THEME_VERSION
         );
-//        wp_enqueue_style(
-//            handle: 'terra-nanotech-plugin-styles',
-//            src: get_theme_file_uri(file: '/Assets/css/plugin-styles.min.css'),
-//            deps: ['terra-nanotech-theme-style'],
-//            ver: THEME_VERSION
-//        );
+        wp_enqueue_style(
+            handle: 'terra-nanotech-plugin-styles',
+            src: get_theme_file_uri(file: '/Assets/css/plugin-styles.min.css'),
+            deps: ['terra-nanotech-theme-style'],
+            ver: THEME_VERSION
+        );
     }
 
     /**
