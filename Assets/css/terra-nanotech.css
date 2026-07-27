@@ -1,10 +1,10 @@
 @media all {
     body {
+        background-attachment: fixed;
         background-image: var(--website-background-image);
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
-        background-attachment: fixed;
         color: var(--text-color);
         font-family: var(--font-family), serif;
         line-height: var(--line-height);
@@ -29,19 +29,18 @@
         background-color: var(--bg-white-transparent);
     }
 
-    .separate-containers .inside-article,
-    .separate-containers .comments-area,
-    .separate-containers .page-header,
+    .grid-container {
+        & .inside-article,
+        & .comments-area,
+        & .page-header,
+        & .paging-navigation {
+            background-color: var(--bg-white-transparent);
+        }
+    }
+
     .one-container .container,
-    .separate-containers .paging-navigation,
-    .inside-page-header {
-        background-color: var(--bg-white-transparent);
-    }
-
-    .sidebar .widget {
-        background-color: var(--bg-white-transparent);
-    }
-
+    .inside-page-header,
+    .sidebar .widget,
     .site-info {
         background-color: var(--bg-white-transparent);
     }
