@@ -229,7 +229,7 @@ const ResponsiveBootstrapToolkit = (($) => {
                  * Which makes: start = 2, end = undefined
                  */
                 if (expression.operator === '>') {
-                    start = expression.orEqual ? pos : ++pos;
+                    start = expression.orEqual ? pos : ++pos; // eslint-disable-line no-useless-assignment
                     end = undefined;
                 }
 
