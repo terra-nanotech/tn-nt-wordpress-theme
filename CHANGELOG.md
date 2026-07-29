@@ -49,6 +49,10 @@ Section Order:
 - Menu icon color in mobile menu
 - Style for site branding
 
+### Changed
+
+- External link detection to be also triggered bei CSS class `external-link`
+
 ## [0.0.1.20260729.1] - 2026-07-29
 
 ### Fixed
@@ -65,6 +69,6 @@ Section Order:
 
 [0.0.1.20260729]: https://github.com/terra-nanotech/tn-nt-wordpress-theme/commits/v0.0.1.20260729 "v0.0.1.20260729"
 [0.0.1.20260729.1]: https://github.com/terra-nanotech/tn-nt-wordpress-theme/compare/v0.0.1.20260729...v0.0.1.20260729.1 "v0.0.1.20260729.1"
-[in development]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v5.0.2...HEAD "In Development"
+[in development]: https://github.com/terra-nanotech/tn-nt-wordpress-theme/compare/v0.0.1.20260729.1...HEAD "In Development"
 [keep a changelog]: http://keepachangelog.com/ "Keep a Changelog"
 [semantic versioning]: http://semver.org/ "Semantic Versioning"
