@@ -26,8 +26,12 @@ jQuery(document).ready(($) => {
                 // Get the hostname of the link
                 const hrefHostname = $(new URL(href)).attr('hostname');
 
-                // Check if the hostname is not in the internalHost array and add the target and classes and attributes to the link element.
-                if ($.inArray(hrefHostname, internalHost) === -1) {
+                // Check if the hostname is not in the internalHost array or if the link has the class 'external-link',
+                // and add the target and classes and attributes to the link element.
+                if (
+                    $.inArray(hrefHostname, internalHost) === -1
+                    || $(element).hasClass('external-link') // jshint ignore:line
+                ) {
                     $(element).addClass('external-link');
                     $(element).attr('target', '_blank');
                     $(element).attr('rel', 'noopener noreferrer');
