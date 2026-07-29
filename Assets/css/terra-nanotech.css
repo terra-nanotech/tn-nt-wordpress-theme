@@ -41,34 +41,39 @@
         border-radius: var(--border-radius);
         z-index: 10;
 
-        .site-branding,
-        .site-logo {
-            margin-bottom: 1rem;
-            margin-right: 1rem;
-        }
+        .inside-header {
+            margin-bottom: -1rem;
+            padding: 20px 40px;
 
-        .site-logo {
-            min-width: 128px;
-        }
-
-        .main-navigation {
-            background-color: transparent;
-
-            a,
-            .main-nav ul ul li a {
-                font-size: 1rem;
+            .site-branding,
+            .site-logo {
+                margin-bottom: 1rem;
+                margin-right: 1rem;
             }
 
-            ul ul {
-                backdrop-filter: var(--backdrop-filter-default);
-                background-color: var(--background-transparent-95);
-                border: var(--border);
-                border-radius: var(--border-radius);
+            .site-logo {
+                min-width: 128px;
             }
 
-            .gp-icon {
-                svg {
-                    fill: var(--text-color);
+            .main-navigation {
+                background-color: transparent;
+
+                a,
+                .main-nav ul ul li a {
+                    font-size: 1rem;
+                }
+
+                ul ul {
+                    backdrop-filter: var(--backdrop-filter-default);
+                    background-color: var(--background-transparent-95);
+                    border: var(--border);
+                    border-radius: var(--border-radius);
+                }
+
+                .gp-icon {
+                    svg {
+                        fill: var(--text-color);
+                    }
                 }
             }
         }
@@ -126,5 +131,9 @@
         right: 0;
         top: 0;
         z-index: 10;
+    }
+
+    .admin-bar .is-sticky .site-header {
+        top: 32px !important;
     }
 }

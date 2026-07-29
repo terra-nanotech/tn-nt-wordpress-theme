@@ -43,6 +43,12 @@ Section Order:
 
 <!-- Your changes go here -->
 
+## [0.0.1.20260729.3] - 2026-07-29
+
+### Fixed
+
+- Some margins, paddings and positionings of the sticky menu
+
 ## [0.0.1.20260729.2] - 2026-07-29
 
 ### Fixed
@@ -72,6 +78,7 @@ Section Order:
 [0.0.1.20260729]: https://github.com/terra-nanotech/tn-nt-wordpress-theme/commits/v0.0.1.20260729 "v0.0.1.20260729"
 [0.0.1.20260729.1]: https://github.com/terra-nanotech/tn-nt-wordpress-theme/compare/v0.0.1.20260729...v0.0.1.20260729.1 "v0.0.1.20260729.1"
 [0.0.1.20260729.2]: https://github.com/terra-nanotech/tn-nt-wordpress-theme/compare/v0.0.1.20260729.1...v0.0.1.20260729.2 "v0.0.1.20260729.2"
+[0.0.1.20260729.3]: https://github.com/terra-nanotech/tn-nt-wordpress-theme/compare/v0.0.1.20260729.2...v0.0.1.20260729.3 "v0.0.1.20260729.3"
 [in development]: https://github.com/terra-nanotech/tn-nt-wordpress-theme/compare/v0.0.1.20260729.2...HEAD "In Development"
 [keep a changelog]: http://keepachangelog.com/ "Keep a Changelog"
 [semantic versioning]: http://semver.org/ "Semantic Versioning"
