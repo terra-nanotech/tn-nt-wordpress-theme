@@ -86,6 +86,8 @@
     }
 
     .metaslider {
+        margin-bottom: 0 !important;
+
         .caption-wrap {
             bottom: initial !important;
             color: var(--text-color);
