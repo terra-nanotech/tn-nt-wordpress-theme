@@ -83,29 +83,22 @@ class Metaslider {
     public function renderMetaBox(WP_Post $post): bool {
         if ($this->metasliderPluginExists()) {
             $metaslider = get_post_meta($post->ID, 'page_metaslider_slider', true);
-
-            // Default stretch setting to theme setting.
-            $metaslider_stretch = 0;
-
             $options = $this->metasliderGetOptions();
             ?>
             <div class="generate-meta-box-content">
                 <div>
                     <label for="page_metaslider"><strong><?php _e('Display Meta Slider', 'terra-nanotech'); ?></strong></label>
-                    <p>
-                        <select id="page_metaslider" name="page_metaslider">
-                            <?php
-                            foreach ($options as $id => $name) {
-                                ?>
-                                <option value="<?php
-                                echo esc_attr($id); ?>" <?php
-                                selected($metaslider, $id); ?>><?php
-                                    echo esc_html($name); ?></option>
-                                <?php
-                            }
+                    <select id="page_metaslider" name="page_metaslider">
+                        <?php
+                        foreach ($options as $id => $name) {
                             ?>
-                        </select>
-                    </p>
+                            <option value="<?php echo esc_attr($id); ?>" <?php selected($metaslider, $id); ?>>
+                                <?php echo esc_html($name); ?>
+                            </option>
+                            <?php
+                        }
+                        ?>
+                    </select>
                 </div>
             </div>
             <?php
@@ -123,7 +116,7 @@ class Metaslider {
      * @return array
      */
     public function metasliderGetOptions(): array {
-        $options = ['' => __('None', 'terra-nanotech')];
+        $options = ['' => __('No Slider', 'terra-nanotech')];
 
         if ($this->metasliderPluginExists()) {
             $sliders = get_posts([
@@ -154,7 +147,11 @@ class Metaslider {
             return false;
         }
 
-        update_post_meta($post_id, 'page_metaslider_slider', sanitize_title(filter_input(INPUT_POST, 'page_metaslider')));
+        update_post_meta(
+            $post_id,
+            'page_metaslider_slider',
+            sanitize_title(filter_input(INPUT_POST, 'page_metaslider'))
+        );
 
         return true;
     }
@@ -191,38 +188,24 @@ class Metaslider {
                 return false;
             }
 
-            /**
-             * Render it
-             */
-            if (str_starts_with(sanitize_title($page_slider), 'metaslider_id_')) {
-                $slider_id = (int)str_replace('metaslider_id_', '', $page_slider);
-                $slider_stretch = get_post_meta($page_id, 'page_metaslider_slider_stretch', true);
+            //  Check if the slider is in the correct format
+            $normalizedPageSlider = sanitize_title((string)$page_slider);
 
-                $sliderHtml = '<div ' . generate_get_attr('page') . '">';
+            // Render the slider using the Meta Slider shortcode
+            if (str_starts_with($normalizedPageSlider, 'metaslider_id_')) {
+                $slider_id = absint(
+                    str_replace(
+                        'metaslider_id_',
+                        '',
+                        $normalizedPageSlider
+                    )
+                );
 
-                if ($slider_stretch === '') {
-                    /**
-                     * We'll default to false, this way it is determined by
-                     * the slider's own settings
-                     */
-                    $slider_stretch = 0;
-                }
+                $slider_html = do_shortcode(sprintf('[metaslider id="%d"]', $slider_id));
 
-                if ($slider_stretch === 1) {
-                    $sliderHtml .= '<div class="meta-slider slider-' . $slider_id . '" data-stretch="true">';
-                } else {
-                    $sliderHtml .= '<div class="meta-slider slider-' . $slider_id . '">';
-                }
-
-                $sliderHtml .= do_shortcode('[metaslider id=' . $slider_id . ']');
-                $sliderHtml .= '</div>';
-                $sliderHtml .= '</div>';
-
-                echo $sliderHtml;
+                echo '<div ' . generate_get_attr('page') . '><div class="meta-slider slider-' . $slider_id . '" data-stretch="true">' . $slider_html . '</div></div>';
             } else {
-                /**
-                 * Wrong format
-                 */
+                // Wrong format
                 return false;
             }
 
