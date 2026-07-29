@@ -47,6 +47,10 @@ Section Order:
 
 - Bottom margin for MetaSlider
 
+### Changed
+
+- Meta Slider class cleaned up
+
 ## [0.0.1.20260729.4] - 2026-07-29
 
 ### Changed
