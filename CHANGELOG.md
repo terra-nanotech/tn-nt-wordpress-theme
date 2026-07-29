@@ -43,6 +43,10 @@ Section Order:
 
 <!-- Your changes go here -->
 
+### Fixed
+
+- Responsive Toolkit writing breakpoint name to the body
+
 ## [0.0.1.20260729.1] - 2026-07-29
 
 ### Fixed

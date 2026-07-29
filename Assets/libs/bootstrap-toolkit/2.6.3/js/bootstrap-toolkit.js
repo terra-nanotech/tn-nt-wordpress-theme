@@ -101,12 +101,12 @@ const ResponsiveBootstrapToolkit = (($) => {
         detectionDivs: {
             // Breakpoints for myFramework, which is a custom framework, but the breakpoints are the same as Bootstrap 5
             myframework: {
-                'xs': $('<div class="device-xs my-xs">xs</div>'), // Extra small devices (portrait phones, less than 576px)
-                'sm': $('<div class="device-sm my-sm">sm</div>'), // Small devices (landscape phones, 576px and up)
-                'md': $('<div class="device-md my-md">md</div>'), // Medium devices (tablets, 768px and up)
-                'lg': $('<div class="device-lg my-lg">lg</div>'), // Large devices (desktops, 992px and up)
-                'xl': $('<div class="device-xl my-xl">xl</div>'), // Extra large devices (large desktops, 1200px and up)
-                'xxl': $('<div class="device-xxl my-xxl">xl</div>') // Extra extra large devices (larger desktops, 1400px and up)
+                'xs': $('<div class="device-xs my-xs"></div>'), // Extra small devices (portrait phones, less than 576px)
+                'sm': $('<div class="device-sm my-sm"></div>'), // Small devices (landscape phones, 576px and up)
+                'md': $('<div class="device-md my-md"></div>'), // Medium devices (tablets, 768px and up)
+                'lg': $('<div class="device-lg my-lg"></div>'), // Large devices (desktops, 992px and up)
+                'xl': $('<div class="device-xl my-xl"></div>'), // Extra large devices (large desktops, 1200px and up)
+                'xxl': $('<div class="device-xxl my-xxl"></div>') // Extra extra large devices (larger desktops, 1400px and up)
             },
         },
 
