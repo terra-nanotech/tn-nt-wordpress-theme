@@ -47,6 +47,7 @@ Section Order:
 
 - Responsive Toolkit writing breakpoint name to the body
 - Menu icon color in mobile menu
+- Style for site branding
 
 ## [0.0.1.20260729.1] - 2026-07-29
 
