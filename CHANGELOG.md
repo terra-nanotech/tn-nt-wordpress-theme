@@ -43,6 +43,10 @@ Section Order:
 
 <!-- Your changes go here -->
 
+### Fixed
+
+- Bottom margin for MetaSlider
+
 ## [0.0.1.20260729.4] - 2026-07-29
 
 ### Changed
