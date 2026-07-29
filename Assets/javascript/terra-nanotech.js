@@ -37,24 +37,6 @@ jQuery(document).ready(($) => {
         });
     };
 
-    const fixStickyMenu = (device) => {
-        const $siteHeader = $('header.site-header');
-
-        if (device === 'desktop') {
-            $siteHeader
-                .addClass('site-header-desktop')
-                .sticky({
-                    topSpacing: 0,
-                    zIndex: 10,
-                    getWidthFrom: 'body',
-                    responsiveWidth: true
-                })
-                .sticky('update');
-        } else {
-            $siteHeader.removeClass('site-header-desktop').unstick();
-        }
-    };
-
     /**
      * Inject a blurred background to the body.
      */
@@ -88,6 +70,21 @@ jQuery(document).ready(($) => {
         );
 
         let activeDevice = null;
+
+        const fixStickyMenu = (device) => {
+            const $siteHeader = $('header.site-header');
+
+            if (device === 'desktop') {
+                $siteHeader
+                    .addClass('site-header-desktop')
+                    .sticky({
+                        zIndex: 10
+                    })
+                    .sticky('update');
+            } else {
+                $siteHeader.removeClass('site-header-desktop').unstick();
+            }
+        };
 
         const syncStickyMenu = () => {
             const nextDevice = getDevice();
