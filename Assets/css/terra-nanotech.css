@@ -34,34 +34,44 @@
         z-index: -1;
     }
 
-    .main-navigation {
-        background-color: transparent;
-
-        a,
-        .main-nav ul ul li a {
-            font-size: 1rem;
-        }
-
-        ul ul {
-            backdrop-filter: var(--backdrop-filter-default);
-            background-color: var(--background-transparent-95);
-            border: var(--border);
-            border-radius: var(--border-radius);
-        }
-
-        .gp-icon {
-            svg {
-                fill: var(--text-color);
-            }
-        }
-    }
-
     .site-header {
         backdrop-filter: var(--backdrop-filter-default);
         background-color: var(--background-transparent-50);
         border: var(--border);
         border-radius: var(--border-radius);
         z-index: 10;
+
+        .site-branding,
+        .site-logo {
+            margin-bottom: 1rem;
+            margin-right: 1rem;
+        }
+
+        .site-logo {
+            min-width: 128px;
+        }
+
+        .main-navigation {
+            background-color: transparent;
+
+            a,
+            .main-nav ul ul li a {
+                font-size: 1rem;
+            }
+
+            ul ul {
+                backdrop-filter: var(--backdrop-filter-default);
+                background-color: var(--background-transparent-95);
+                border: var(--border);
+                border-radius: var(--border-radius);
+            }
+
+            .gp-icon {
+                svg {
+                    fill: var(--text-color);
+                }
+            }
+        }
     }
 
     .grid-container {
