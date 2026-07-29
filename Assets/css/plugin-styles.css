@@ -2,24 +2,24 @@
 ----------------------------------------------------------------------------- */
 @media all {
     .terra-nanotech-childpage-menu-widget {
-        --link-color: var(--accent); /* Inherited from parent (generatepress generated inline style)) */
-        --border-color-darker: rgb(185 192 199);
-        --border-color-default: rgb(220 220 220);
+        /* --link-color: var(--accent); !* Inherited from parent (generatepress generated inline style)) *! */
+        --border-color: rgb(185 192 199);
 
         ul {
             list-style: none;
+            margin-left: 0 !important;
             margin-top: 0 !important;
         }
 
         .childpages-list {
-            border-color: var(--border-color-default);
+            border-color: var(--border-color);
             border-style: solid;
             border-width: 2px 0;
             clear: both;
             padding-left: 0;
 
             > .page_item {
-                border-bottom: 1px solid var(--border-color-default);
+                border-bottom: 1px solid var(--border-color);
 
                 a {
                     color: inherit;
@@ -28,7 +28,8 @@
                 }
 
                 > .children {
-                    border-top: 1px solid var(--border-color-default);
+                    border-top: 1px solid var(--border-color);
+                    padding-left: 1rem;
                 }
             }
 
@@ -55,7 +56,7 @@
                 }
 
                 .page_item a:hover::before {
-                    border-left-color: var(--border-color-darker);
+                    border-left-color: var(--border-color);
                 }
             }
 
@@ -86,10 +87,10 @@
 
     .metaslider {
         .caption-wrap {
-            top: 0;
             bottom: initial !important;
+            color: var(--text-color);
             opacity: 0.5 !important;
-            color: rgb(200 200 200);
+            top: 0;
         }
 
         .caption {
@@ -120,18 +121,18 @@
     }
 
     .coin-slider {
-        width: 100% !important;
-        max-width: 1680px;
-        overflow: hidden;
+        background-attachment: fixed;
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
-        background-attachment: fixed;
+        max-width: 1680px;
+        overflow: hidden;
+        width: 100% !important;
 
         img {
-            width: 100% !important;
             height: auto;
             max-width: 1680px;
+            width: 100% !important;
         }
     }
 }

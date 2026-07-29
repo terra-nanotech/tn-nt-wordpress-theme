@@ -6,9 +6,22 @@
         background-repeat: no-repeat;
         background-size: cover;
         color: var(--text-color);
-        font-family: var(--font-family), serif;
+        font-family: var(--font-family);
+        font-size: 1rem;
         line-height: var(--line-height);
         padding-top: 2rem;
+
+        a {
+            color: var(--link-color) !important;
+        }
+    }
+
+    button,
+    img,
+    input,
+    select,
+    textarea {
+        border-radius: var(--border-radius) !important;
     }
 
     .blur-background {
@@ -23,10 +36,26 @@
 
     .main-navigation {
         background-color: transparent;
+
+        a,
+        .main-nav ul ul li a {
+            font-size: 1rem;
+        }
+
+        ul ul {
+            backdrop-filter: var(--backdrop-filter-default);
+            background-color: var(--background-transparent-95);
+            border: var(--border);
+            border-radius: var(--border-radius);
+        }
     }
 
     .site-header {
-        background-color: var(--bg-white-transparent);
+        backdrop-filter: var(--backdrop-filter-default);
+        background-color: var(--background-transparent-50);
+        border: var(--border);
+        border-radius: var(--border-radius);
+        z-index: 10;
     }
 
     .grid-container {
@@ -35,7 +64,10 @@
         .page-header,
         .paging-navigation,
         .meta-slider {
-            background-color: var(--bg-white-transparent);
+            backdrop-filter: var(--backdrop-filter-default);
+            background-color: var(--background-transparent-50);
+            border: var(--border);
+            border-radius: var(--border-radius);
         }
     }
 
@@ -43,11 +75,21 @@
     .inside-page-header,
     .sidebar .widget,
     .site-info {
-        background-color: var(--bg-white-transparent);
+        backdrop-filter: var(--backdrop-filter-default);
+        background-color: var(--background-transparent-50);
+        border: var(--border);
+        border-radius: var(--border-radius);
     }
 
     .site-footer {
         padding-bottom: 2rem;
+    }
+
+    .entry-meta {
+        color: var(--contrast-2);
+        font-size: 90%;
+        line-height: 1.5;
+        margin-top: .5em;
     }
 }
 
@@ -55,7 +97,8 @@
 ------------------------------------------------------------------------------------- */
 @media all {
     .is-sticky .site-header {
-        background-color: rgb(255 255 255);
+        background-color: var(--background-transparent-85);
+        border-radius: unset;
         box-shadow: 0 0 1.25rem rgb(0 0 0 / 25%);
         left: 0;
         margin-left: 0;
