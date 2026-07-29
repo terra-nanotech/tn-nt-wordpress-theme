@@ -43,6 +43,10 @@ Section Order:
 
 <!-- Your changes go here -->
 
+### Changed
+
+- Generally darken the background image a bit to make the text more readable
+
 ## [0.0.1.20260729.3] - 2026-07-29
 
 ### Fixed

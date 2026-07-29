@@ -25,6 +25,7 @@
     }
 
     .blur-background {
+        background-color: var(--background-transparent-50);
         backdrop-filter: var(--backdrop-filter-default);
         height: 100%;
         left: 0;
