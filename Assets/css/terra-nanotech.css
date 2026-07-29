@@ -48,6 +48,12 @@
             border: var(--border);
             border-radius: var(--border-radius);
         }
+
+        .gp-icon {
+            svg {
+                fill: var(--text-color);
+            }
+        }
     }
 
     .site-header {
