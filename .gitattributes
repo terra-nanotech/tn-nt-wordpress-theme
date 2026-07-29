@@ -17,6 +17,9 @@ phpcs.xml export-ignore
 # readme files
 README.md export-ignore
 
+# Changelog
+CHANGELOG.md export-ignore
+
 # other files
 .editorconfig export-ignore
 .make export-ignore
@@ -26,3 +29,5 @@ README.md export-ignore
 eslint.config.js export-ignore
 Makefile export-ignore
 CODEOWNERS export-ignore
+style.min.css export-ignore
+style.min.css.map export-ignore

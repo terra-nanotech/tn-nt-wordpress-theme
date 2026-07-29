@@ -17,8 +17,12 @@ node_modules
 scss
 Makefile
 README.md
+CHANGELOG.md
+CODEOWNERS
 *.zip
 /vendor
 .make
 .rsync-exclude
 docs
+style.min.css
+style.min.css.map
