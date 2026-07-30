@@ -50,6 +50,7 @@ Section Order:
 ### Changed
 
 - Meta Slider class cleaned up
+- Meta Slider CSS cleaned up
 
 ## [0.0.1.20260729.4] - 2026-07-29
 
