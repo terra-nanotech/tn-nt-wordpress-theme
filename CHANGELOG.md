@@ -43,6 +43,10 @@ Section Order:
 
 <!-- Your changes go here -->
 
+### Fixed
+
+- External link detection in WP custom menus
+
 ## [0.0.1.20260730] - 2026-07-30
 
 ### Fixed
@@ -64,7 +68,7 @@ Section Order:
 
 ### Fixed
 
-- Some margins, paddings and positionings of the sticky menu
+- Some margins, paddings and positioning of the sticky menu
 
 ## [0.0.1.20260729.2] - 2026-07-29
 
