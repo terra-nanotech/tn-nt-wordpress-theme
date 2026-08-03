@@ -159,7 +159,7 @@
 
 /* Responsive
 ------------------------------------------------------------------------------------- */
-@media (width > 768px) {
+@media (width >= 768px) {
     body {
         &.blog .site-main {
             margin-bottom: 86px;
@@ -183,7 +183,7 @@
     }
 }
 
-@media (width > 1199px) {
+@media (width >= 1200px) {
     body {
         &.blog .site-main {
             margin-bottom: 88px;
