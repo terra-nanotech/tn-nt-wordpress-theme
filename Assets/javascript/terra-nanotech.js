@@ -57,8 +57,9 @@ jQuery(document).ready(($) => {
 
     const blogMasonry = () => {
         const grid = document.querySelector('body.blog .site-main');
+        const articles = document.querySelectorAll('body.blog .site-main article');
 
-        if (grid) {
+        if (grid && articles.length > 0) {
             const msnry = new Masonry(grid, { // eslint-disable-line no-unused-vars
                 percentPosition: true,
                 itemSelector: '.post',
