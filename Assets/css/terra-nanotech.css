@@ -189,7 +189,7 @@
             margin-bottom: 88px;
 
             article {
-                width: calc((100% / 3) - 13px);
+                width: calc((100% / 3) - 13.0001px);
             }
 
             .paging-navigation {
