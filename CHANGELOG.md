@@ -43,6 +43,10 @@ Section Order:
 
 <!-- Your changes go here -->
 
+### Added
+
+- Masonry effect for the blog post list
+
 ### Fixed
 
 - External link detection in WP custom menus

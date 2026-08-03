@@ -93,9 +93,20 @@ class AssetLoader {
         );
 
         wp_enqueue_script(
+            handle: 'masonry-layout',
+            src: get_theme_file_uri(file: '/Assets/libs/masonry-layout/4.2.2/masonry.pkgd.min.js'),
+            deps: ['jquery'],
+            ver: THEME_VERSION,
+            args: [
+                'in_footer' => true,
+                'strategy' => 'async'
+            ]
+        );
+
+        wp_enqueue_script(
             handle: 'ppfeufer',
             src: get_theme_file_uri(file: '/Assets/javascript/terra-nanotech.min.js'),
-            deps: ['breakpoints-detection', 'stickyjs'],
+            deps: ['breakpoints-detection', 'masonry-layout', 'stickyjs'],
             ver: THEME_VERSION,
             args: [
                 'in_footer' => true,
