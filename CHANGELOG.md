@@ -46,6 +46,7 @@ Section Order:
 ### Fixed
 
 - External link detection in WP custom menus
+- Article image styling
 
 ## [0.0.1.20260730] - 2026-07-30
 
