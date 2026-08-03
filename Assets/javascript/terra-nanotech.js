@@ -1,4 +1,4 @@
-/* global ResponsiveBootstrapToolkit */
+/* global ResponsiveBootstrapToolkit, Masonry */
 
 jQuery(document).ready(($) => {
     'use strict';
@@ -55,6 +55,19 @@ jQuery(document).ready(($) => {
         $('<div class="blur-background"></div>').prependTo('body');
     };
 
+    const blogMasonry = () => {
+        const grid = document.querySelector('body.blog .site-main');
+
+        if (grid) {
+            const msnry = new Masonry(grid, { // eslint-disable-line no-unused-vars
+                percentPosition: true,
+                itemSelector: '.post',
+                columnWidth: '.post',
+                gutter: 20,
+            });
+        }
+    };
+
     /**
      * Functions that need to be executed on successful ajax events.
      */
@@ -68,6 +81,7 @@ jQuery(document).ready(($) => {
     (() => {
         injectBlurBodyBackground();
         externalLinks();
+        blogMasonry();
 
         console.log('Terra Nanotech JS: Loaded');
     })();
@@ -113,6 +127,8 @@ jQuery(document).ready(($) => {
 
         // Trigger on viewport change to ensure the sticky menu is configured correctly on page load.
         $(window).resize(viewport.changed(() => {
+            console.log(`Terra Nanotech JS: Viewport changed to ${viewport.current()}`);
+
             syncStickyMenu();
         }, 1));
     })(jQuery, ResponsiveBootstrapToolkit);
