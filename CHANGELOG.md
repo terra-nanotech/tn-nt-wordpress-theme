@@ -43,6 +43,8 @@ Section Order:
 
 <!-- Your changes go here -->
 
+## [0.0.1.20260803] - 2026-08-03
+
 ### Added
 
 - Masonry effect for the blog post list
@@ -107,6 +109,7 @@ Section Order:
 [0.0.1.20260729.3]: https://github.com/terra-nanotech/tn-nt-wordpress-theme/compare/v0.0.1.20260729.2...v0.0.1.20260729.3 "v0.0.1.20260729.3"
 [0.0.1.20260729.4]: https://github.com/terra-nanotech/tn-nt-wordpress-theme/compare/v0.0.1.20260729.3...v0.0.1.20260729.4 "v0.0.1.20260729.4"
 [0.0.1.20260730]: https://github.com/terra-nanotech/tn-nt-wordpress-theme/compare/v0.0.1.20260729.4...v0.0.1.20260730 "v0.0.1.20260730"
-[in development]: https://github.com/terra-nanotech/tn-nt-wordpress-theme/compare/v0.0.1.20260730...HEAD "In Development"
+[0.0.1.20260803]: https://github.com/terra-nanotech/tn-nt-wordpress-theme/compare/v0.0.1.20260730...v0.0.1.20260803 "v0.0.1.20260803"
+[in development]: https://github.com/terra-nanotech/tn-nt-wordpress-theme/compare/v0.0.1.20260803...HEAD "In Development"
 [keep a changelog]: http://keepachangelog.com/ "Keep a Changelog"
 [semantic versioning]: http://semver.org/ "Semantic Versioning"
