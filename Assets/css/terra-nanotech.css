@@ -91,6 +91,20 @@
             border: var(--border);
             border-radius: var(--border-radius);
         }
+
+        .inside-article {
+            .post-image,
+            .featured-image {
+                margin-left: -40px;
+                margin-right: -40px;
+
+                .size-full {
+                    aspect-ratio: 16 / 9;
+                    border-radius: 0 !important;
+                    width: 100%;
+                }
+            }
+        }
     }
 
     .one-container .container,
