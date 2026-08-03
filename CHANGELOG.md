@@ -43,6 +43,10 @@ Section Order:
 
 <!-- Your changes go here -->
 
+### Fixed
+
+- Element positioning when no articles in blog post list available
+
 ## [0.0.1.20260803] - 2026-08-03
 
 ### Added

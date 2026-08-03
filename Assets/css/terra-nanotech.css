@@ -8,7 +8,7 @@
         padding-top: 2rem;
 
         &.blog {
-            .site-main {
+            .site-main:has(article) {
                 margin-bottom: 107px;
 
                 article {
@@ -161,7 +161,7 @@
 ------------------------------------------------------------------------------------- */
 @media (width >= 768px) {
     body {
-        &.blog .site-main {
+        &.blog .site-main:has(article)  {
             margin-bottom: 86px;
 
             article {
@@ -185,7 +185,7 @@
 
 @media (width >= 1200px) {
     body {
-        &.blog .site-main {
+        &.blog .site-main:has(article) {
             margin-bottom: 88px;
 
             article {
