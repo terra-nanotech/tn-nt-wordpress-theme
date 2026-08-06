@@ -76,6 +76,7 @@ class Main {
     private function getClassesToLoad(): array {
         return [
             AssetLoader::class, // Load assets
+            Overrides\PostExcerpt::class, // Post excerpt / read-more overrides
             Overrides\WesiteLogo::class, // Website logo overrides
             Overrides\WebsiteFooter::class, // Website footer overrides
             Plugins\ChildpageMenu::class, // Childpage menu plugin

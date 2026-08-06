@@ -55,6 +55,7 @@ Section Order:
 ### Changed
 
 - `jquery.stickyjs` modernized
+- Override excerpt more behavior
 
 ## [0.0.1.20260803] - 2026-08-03
 
