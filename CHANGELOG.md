@@ -57,6 +57,10 @@ Section Order:
 - `jquery.stickyjs` modernized
 - Override excerpt more behavior
 
+### Removed
+
+- Website field from the comment form to prevent backlink spam
+
 ## [0.0.1.20260803] - 2026-08-03
 
 ### Added
