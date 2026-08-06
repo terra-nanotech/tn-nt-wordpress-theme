@@ -48,6 +48,10 @@ Section Order:
 
 <!-- Your changes go here -->
 
+### Added
+
+- Class for website behavior overrides to deviate from the default WordPress behavior
+
 ### Fixed
 
 - Element positioning when no articles in blog post list available
