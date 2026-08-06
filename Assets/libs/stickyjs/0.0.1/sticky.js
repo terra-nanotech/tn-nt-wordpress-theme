@@ -3,6 +3,11 @@
 /*!
  * Sticky Plugin for jQuery (modernized fork by Peter Pfeufer)
  *
+ * @version 0.0.1
+ * @author Peter Pfeufer
+ * @license GPL-3.0 or later
+ * @link https://github.com/ppfeufer/stickyjs
+ *
  * Description: Makes an element on the page stick on the screen as you scroll.
  *              It will only set the 'top' and 'position' of your element,
  *              you might need to adjust the width in some cases.
@@ -14,7 +19,7 @@
  *      Ruud Kamphuis (ruudk)
  *      Leonardo C. Daronco (daronco)
  * Created: 02/14/2011
- * Website: http://stickyjs.com/
+ * GitHub: https://github.com/garand/sticky
  */
 
 (function (factory) {
@@ -36,32 +41,33 @@
     const splice = Array.prototype.splice; // save ref to original slice()
 
     let defaults = {
-            topSpacing: 0,
-            bottomSpacing: 0,
-            className: 'is-sticky',
-            wrapperClassName: 'sticky-wrapper',
-            center: false,
-            getWidthFrom: '',
-            widthFromWrapper: true, // works only when .getWidthFrom is empty
-            responsiveWidth: false,
-            zIndex: 'inherit'
-        },
-        $window = $(window),
-        $document = $(document),
-        sticked = [],
-        windowHeight = $window.height();
+        topSpacing: 0,
+        bottomSpacing: 0,
+        className: 'is-sticky',
+        wrapperClassName: 'sticky-wrapper',
+        center: false,
+        getWidthFrom: '',
+        widthFromWrapper: true, // works only when .getWidthFrom is empty
+        responsiveWidth: false,
+        zIndex: 'inherit'
+    };
+    const $window = $(window);
+    const $document = $(document);
+    const sticked = [];
+    let windowHeight = $window.height();
 
     const scroller = function () {
-        const scrollTop = $window.scrollTop(),
-            documentHeight = $document.height(),
-            dwh = documentHeight - windowHeight,
-            extra = (scrollTop > dwh) ? dwh - scrollTop : 0;
+        const scrollTop = $window.scrollTop();
+        const documentHeight = $document.height();
+        const dwh = documentHeight - windowHeight;
+        const extra = (scrollTop > dwh) ? dwh - scrollTop : 0;
 
         let i = 0, l = sticked.length;
+
         for (; i < l; i++) {
-            const s = sticked[i],
-                elementTop = s.stickyWrapper.offset().top,
-                etse = elementTop - s.topSpacing - extra;
+            const s = sticked[i];
+            const elementTop = s.stickyWrapper.offset().top;
+            const etse = elementTop - s.topSpacing - extra;
 
             //update height in case of dynamic content
             s.stickyWrapper.css('height', s.stickyElement.outerHeight());
@@ -93,6 +99,7 @@
 
                     if (s.getWidthFrom) {
                         const padding = s.stickyElement.innerWidth() - s.stickyElement.width();
+
                         newWidth = $(s.getWidthFrom).width() - padding || null;
                     } else if (s.widthFromWrapper) {
                         newWidth = s.stickyWrapper.width();
@@ -153,6 +160,7 @@
         windowHeight = $window.height();
 
         let i = 0, l = sticked.length;
+
         for (; i < l; i++) {
             const s = sticked[i];
             let newWidth = null;
@@ -260,8 +268,8 @@
                 setupChangeListeners(element);
             });
         },
-        setWrapperHeight,
-        setupChangeListeners,
+        // setWrapperHeight,
+        // setupChangeListeners,
         update: scroller,
         unstick: ($elements) => {
             return $elements.each((index, element) => {
