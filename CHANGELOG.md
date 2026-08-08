@@ -51,6 +51,7 @@ Section Order:
 ### Added
 
 - Class for website behavior overrides to deviate from the default WordPress behavior
+- Search URL rewrite to `/search/` instead of `?s=`
 
 ### Fixed
 

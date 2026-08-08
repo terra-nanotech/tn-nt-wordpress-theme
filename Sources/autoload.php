@@ -16,7 +16,7 @@ spl_autoload_register(callback: '\\' . __NAMESPACE__ . '\autoload');
  *
  * @param string $className The name of the class to load
  * @return void
- * @package Ppfeufer\Theme\Ppfeufer
+ * @package TerraNanotech\Theme\TerraNanotech
  */
 function autoload(string $className): void {
     // Check if the class name starts with the base namespace or includes `Libs' in the path

@@ -7,7 +7,7 @@ namespace TerraNanotech\Theme\TerraNanotech;
  *
  * This class is responsible for loading all assets for the theme.
  *
- * @package Ppfeufer\Theme\Ppfeufer
+ * @package TerraNanotech\Theme\TerraNanotech
  */
 class AssetLoader {
     /**
