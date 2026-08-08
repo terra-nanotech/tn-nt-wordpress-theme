@@ -205,23 +205,13 @@
                 childList: true
             });
         } else {
-            if (window.addEventListener) {
-                stickyElement.addEventListener('DOMNodeInserted', () => {
-                    setWrapperHeight(stickyElement);
-                }, false);
+            stickyElement.addEventListener('DOMNodeInserted', () => {
+                setWrapperHeight(stickyElement);
+            }, false);
 
-                stickyElement.addEventListener('DOMNodeRemoved', () => {
-                    setWrapperHeight(stickyElement);
-                }, false);
-            } else if (window.attachEvent) {
-                stickyElement.attachEvent('onDOMNodeInserted', () => {
-                    setWrapperHeight(stickyElement);
-                });
-
-                stickyElement.attachEvent('onDOMNodeRemoved', () => {
-                    setWrapperHeight(stickyElement);
-                });
-            }
+            stickyElement.addEventListener('DOMNodeRemoved', () => {
+                setWrapperHeight(stickyElement);
+            }, false);
         }
     };
 

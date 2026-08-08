@@ -59,7 +59,7 @@ Section Order:
 
 ### Changed
 
-- `jquery.stickyjs` modernized
+- Use `stickyjs` release version
 - Override excerpt more behavior
 
 ### Removed
