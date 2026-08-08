@@ -6,7 +6,7 @@ wp_path = ./../../../../WP-Sources
 .PHONY: activate-theme
 activate-theme:
 	@$(wp_cli) theme activate \
-		$(theme_name) \
+		$(GENERAL__NAME_VERBOSE) \
 		--path=$(wp_path)
 
 # Clear all transient caches from the WordPress database
@@ -21,7 +21,7 @@ clear-transient:
 .PHONY: deactivate-theme
 deactivate-theme:
 	@$(wp_cli) theme deactivate \
-		$(theme_name) \
+		$(GENERAL__NAME_VERBOSE) \
 		--path=$(wp_path)
 
 # Create the theme .pot file
@@ -29,10 +29,10 @@ deactivate-theme:
 pot:
 	@$(wp_cli) i18n make-pot \
 		. \
-		l10n/$(text-domain).pot \
-		--slug=$(text-domain) \
-		--domain=$(text-domain) \
-		--headers='{"Report-Msgid-Bugs-To":"$(theme_issues_url)"}' \
+		l10n/$(TRANSLATION__TEXTDOMAIN).pot \
+		--slug=$(TRANSLATION__TEXTDOMAIN) \
+		--domain=$(TRANSLATION__TEXTDOMAIN) \
+		--headers='{"Report-Msgid-Bugs-To":"$(GIT__GIT_REPOSITORY_ISSUES)"}' \
 		--include="/"
 
 # Start the WP-CLI shell
