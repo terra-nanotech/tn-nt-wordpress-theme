@@ -48,6 +48,10 @@ Section Order:
 
 <!-- Your changes go here -->
 
+### Changed
+
+- Adjust masonry on blog posts page for the presence of a potential widget area
+
 ## [0.0.1.20260808] - 2026-08-08
 
 ### Added
