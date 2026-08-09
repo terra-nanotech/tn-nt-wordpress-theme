@@ -83,7 +83,7 @@ class AssetLoader {
 
         wp_enqueue_script(
             handle: 'stickyjs',
-            src: get_theme_file_uri(file: '/Assets/libs/stickyjs/0.0.1/stickyjs.min.js'),
+            src: get_theme_file_uri(file: '/Assets/libs/stickyjs/0.0.2/dist/stickyjs.min.js'),
             deps: ['jquery'],
             ver: THEME_VERSION,
             args: [
