@@ -13,7 +13,11 @@ prepare-release: pot
 		sed -i "/<!-- Your changes go here -->/a\\\n## [$$new_version] - $$(date '+%Y-%m-%d')" CHANGELOG.md; \
 		echo "[$$new_version]: $(GIT__GIT_REPOSITORY)/compare/v$$previous_version...v$$new_version \"v$$new_version\"" >> CHANGELOG.md; \
 	fi; \
+	# Update the version in package.json and rebuild node modules \
 	sed -i -E "\|\"version\"\: |s|\"\: .*|\"\: \"$$new_version\",|g" package.json; \
+	rm -rf node_modules; \
+	rm package-lock.json; \
+	npm install; \
 	sed -i -E "\|\* Version\: |s|\: .*|\: $$new_version|g" style.css; \
 	if [[ $$new_version =~ (alpha|beta) ]]; then \
 		echo "$(TEXT_COLOR_RED)$(TEXT_BOLD)Pre-release$(TEXT_RESET) version detected!"; \

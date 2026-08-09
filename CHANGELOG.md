@@ -48,6 +48,8 @@ Section Order:
 
 <!-- Your changes go here -->
 
+## [0.0.1.20260809] - 2026-08-09
+
 ### Added
 
 - Masonry effect to search results and archive pages
@@ -146,6 +148,7 @@ Section Order:
 [0.0.1.20260730]: https://github.com/terra-nanotech/tn-nt-wordpress-theme/compare/v0.0.1.20260729.4...v0.0.1.20260730 "v0.0.1.20260730"
 [0.0.1.20260803]: https://github.com/terra-nanotech/tn-nt-wordpress-theme/compare/v0.0.1.20260730...v0.0.1.20260803 "v0.0.1.20260803"
 [0.0.1.20260808]: https://github.com/terra-nanotech/tn-nt-wordpress-theme/compare/v0.0.1.20260803...v0.0.1.20260808 "v0.0.1.20260808"
-[in development]: https://github.com/terra-nanotech/tn-nt-wordpress-theme/compare/v0.0.1.20260808...HEAD "In Development"
+[0.0.1.20260809]: https://github.com/terra-nanotech/tn-nt-wordpress-theme/compare/v0.0.1.20260808...v0.0.1.20260809 "v0.0.1.20260809"
+[in development]: https://github.com/terra-nanotech/tn-nt-wordpress-theme/compare/v0.0.1.20260809...HEAD "In Development"
 [keep a changelog]: http://keepachangelog.com/ "Keep a Changelog"
 [semantic versioning]: http://semver.org/ "Semantic Versioning"
