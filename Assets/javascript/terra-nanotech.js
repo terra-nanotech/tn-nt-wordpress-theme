@@ -55,17 +55,21 @@ jQuery(document).ready(($) => {
         $('<div class="blur-background"></div>').prependTo('body');
     };
 
-    const blogMasonry = () => {
-        const grid = document.querySelector('body.blog .site-main');
-        const articles = document.querySelectorAll('body.blog .site-main article');
+    const initMasonry = () => {
+        const grid = document.querySelector(
+            'body.blog .site-main, body.search .site-main, body.archive .site-main'
+        );
+        const articles = grid ? grid.querySelectorAll('article') : [];
+
 
         if (grid && articles.length > 0) {
             const msnry = new Masonry(grid, { // eslint-disable-line no-unused-vars
-                percentPosition: true,
-                itemSelector: '.post',
-                columnWidth: '.post',
+                columnWidth: 'article',
                 gutter: 20,
-                maxColumnHeightDifference: 1
+                itemSelector: 'article',
+                maxColumnHeightDifference: 1,
+                percentPosition: true,
+                stamp: '.site-main .page-header',
             });
         }
     };
@@ -83,7 +87,7 @@ jQuery(document).ready(($) => {
     (() => {
         injectBlurBodyBackground();
         externalLinks();
-        blogMasonry();
+        initMasonry();
 
         console.log('Terra Nanotech JS: Loaded');
     })();
