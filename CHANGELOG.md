@@ -50,6 +50,7 @@ Section Order:
 
 ### Changed
 
+- StickyJS updated to v0.0.2
 - Adjust masonry on blog posts page for the presence of a potential widget area
 
 ## [0.0.1.20260808] - 2026-08-08
