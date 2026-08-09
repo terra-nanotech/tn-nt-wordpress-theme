@@ -65,6 +65,7 @@ jQuery(document).ready(($) => {
                 itemSelector: '.post',
                 columnWidth: '.post',
                 gutter: 20,
+                maxColumnHeightDifference: 1
             });
         }
     };
