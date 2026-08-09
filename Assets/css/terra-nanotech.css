@@ -7,7 +7,9 @@
         line-height: var(--line-height);
         padding-top: 2rem;
 
-        &.blog .site-content {
+        &.archive .site-content,
+        &.blog .site-content,
+        &.search .site-content {
             .site-main:has(article) {
                 margin-bottom: 107px;
 
@@ -168,7 +170,9 @@
 ------------------------------------------------------------------------------------- */
 @media (width > 768px) {
     body {
-        &.blog .site-content {
+        &.archive .site-content,
+        &.blog .site-content,
+        &.search .site-content {
             .site-main:has(article) {
                 margin-bottom: 86px;
 
@@ -207,7 +211,9 @@
 
 @media (width >= 1200px) {
     body {
-        &.blog .site-content {
+        &.archive .site-content,
+        &.blog .site-content,
+        &.search .site-content {
             .site-main:has(article) {
                 margin-bottom: 88px;
 

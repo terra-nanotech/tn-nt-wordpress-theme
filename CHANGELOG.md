@@ -48,6 +48,10 @@ Section Order:
 
 <!-- Your changes go here -->
 
+### Added
+
+- Masonry effect to search results and archive pages
+
 ### Changed
 
 - Masonry updated to v0.0.2
