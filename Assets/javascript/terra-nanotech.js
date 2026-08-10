@@ -1,4 +1,4 @@
-/* global ResponsiveBootstrapToolkit, Masonry */
+/* global ResponsiveToolkit, Masonry */
 
 jQuery(document).ready(($) => {
     'use strict';
@@ -137,5 +137,5 @@ jQuery(document).ready(($) => {
 
             syncStickyMenu();
         }, 1));
-    })(jQuery, ResponsiveBootstrapToolkit);
+    })(jQuery, ResponsiveToolkit);
 });

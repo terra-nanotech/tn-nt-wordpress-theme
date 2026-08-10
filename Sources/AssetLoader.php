@@ -39,7 +39,7 @@ class AssetLoader {
     public function loadStyles(): void {
         wp_enqueue_style(
             handle: 'brealpoints-detection',
-            src: get_theme_file_uri(file: '/Assets/libs/bootstrap-toolkit/2.6.3/css/breakpoints.min.css'),
+            src: get_theme_file_uri(file: '/Assets/libs/responsive-toolkit/0.0.1/dist/css/responsive-toolkit.min.css'),
             deps: ['generate-style'],
             ver: THEME_VERSION
         );
@@ -72,7 +72,7 @@ class AssetLoader {
     public function loadScripts(): void {
         wp_enqueue_script(
             handle: 'breakpoints-detection',
-            src: get_theme_file_uri(file: '/Assets/libs/bootstrap-toolkit/2.6.3/js/bootstrap-toolkit.min.js'),
+            src: get_theme_file_uri(file: '/Assets/libs/responsive-toolkit/0.0.1/dist/js/responsive-toolkit.min.js'),
             deps: ['jquery'],
             ver: THEME_VERSION,
             args: [
