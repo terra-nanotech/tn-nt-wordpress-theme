@@ -48,6 +48,10 @@ Section Order:
 
 <!-- Your changes go here -->
 
+### Changed
+
+- Updated to the latest modernized version of Responsive Toolkit
+
 ## [0.0.1.20260809] - 2026-08-09
 
 ### Added

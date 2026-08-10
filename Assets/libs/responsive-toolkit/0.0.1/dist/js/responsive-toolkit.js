@@ -1,11 +1,19 @@
 /*!
+ * Responsive Toolkit for jQuery (modernized fork by Peter Pfeufer)
+ *
+ * @version 0.0.1
+ * @author Peter Pfeufer
+ * @license GPL-3.0 or later
+ * @link https://github.com/ppfeufer/responsive-toolkit
+ *
+ * Description: Allows for easy breakpoint detection in JavaScript.
+ *
+ * Original Plugin:
  * Responsive Bootstrap Toolkit
  * Author:    Maciej Gurban
- * License:   MIT
- * Version:   2.6.3 (2016-06-21)
  * Origin:    https://github.com/maciej-gurban/responsive-bootstrap-toolkit
  */
-const ResponsiveBootstrapToolkit = (($) => {
+const ResponsiveToolkit = (($) => {
     'use strict';
 
     /**
@@ -99,15 +107,39 @@ const ResponsiveBootstrapToolkit = (($) => {
          * Breakpoint detection divs for each framework version
          */
         detectionDivs: {
-            // Breakpoints for myFramework, which is a custom framework, but the breakpoints are the same as Bootstrap 5
-            myframework: {
-                'xs': $('<div class="device-xs my-xs"></div>'), // Extra small devices (portrait phones, less than 576px)
-                'sm': $('<div class="device-sm my-sm"></div>'), // Small devices (landscape phones, 576px and up)
-                'md': $('<div class="device-md my-md"></div>'), // Medium devices (tablets, 768px and up)
-                'lg': $('<div class="device-lg my-lg"></div>'), // Large devices (desktops, 992px and up)
-                'xl': $('<div class="device-xl my-xl"></div>'), // Extra large devices (large desktops, 1200px and up)
-                'xxl': $('<div class="device-xxl my-xxl"></div>') // Extra extra large devices (larger desktops, 1400px and up)
+            // Default breakpoints, the same breakpoints as Bootstrap 5
+            default: {
+                'xs': $('<div class="device-xs responsive-toolkit-xs"></div>'), // Extra small devices (portrait phones, less than 576px)
+                'sm': $('<div class="device-sm responsive-toolkit-sm"></div>'), // Small devices (landscape phones, 576px and up)
+                'md': $('<div class="device-md responsive-toolkit-md"></div>'), // Medium devices (tablets, 768px and up)
+                'lg': $('<div class="device-lg responsive-toolkit-lg"></div>'), // Large devices (desktops, 992px and up)
+                'xl': $('<div class="device-xl responsive-toolkit-xl"></div>'), // Extra large devices (large desktops, 1200px and up)
+                'xxl': $('<div class="device-xxl responsive-toolkit-xxl"></div>') // Extra, extra large devices (larger desktops, 1400px and up)
             },
+            // Breakpoints for Bootstrap 5
+            bootstrap5: {
+                'xs': $('<div class="device-xs d-xs-block d-sm-none d-md-none d-lg-none d-xl-none d-xxl-none"></div>'),
+                'sm': $('<div class="device-sm d-none d-sm-block d-md-none d-lg-none d-xl-none d-xxl-none"></div>'),
+                'md': $('<div class="device-md d-none d-md-block d-sm-none d-lg-none d-xl-none d-xxl-none"></div>'),
+                'lg': $('<div class="device-lg d-none d-lg-block d-sm-none d-md-none d-xl-none d-xxl-none"></div>'),
+                'xl': $('<div class="device-xl d-none d-xl-block d-sm-none d-md-none d-lg-none d-xxl-none"></div>'),
+                'xxl': $('<div class="device-xxl d-none d-xxl-block d-sm-none d-md-none d-lg-none d-xl-none"></div>')
+            },
+            // Breakpoints for Bootstrap 4
+            bootstrap4: {
+                'xs': $('<div class="device-xs d-xs-block d-sm-none d-md-none d-lg-none d-xl-none"></div>'),
+                'sm': $('<div class="device-sm d-none d-sm-block d-md-none d-lg-none d-xl-none"></div>'),
+                'md': $('<div class="device-md d-none d-md-block d-sm-none d-lg-none d-xl-none"></div>'),
+                'lg': $('<div class="device-lg d-none d-lg-block d-sm-none d-md-none d-xl-none"></div>'),
+                'xl': $('<div class="device-xl d-none d-xl-block d-sm-none d-md-none d-lg-none"></div>'),
+            },
+            // Breakpoints for Bootstrap 3
+            bootstrap3: {
+                'xs': $('<div class="device-xs visible-xs visible-xs-block"></div>'),
+                'sm': $('<div class="device-sm visible-sm visible-sm-block"></div>'),
+                'md': $('<div class="device-md visible-md visible-md-block"></div>'),
+                'lg': $('<div class="device-lg visible-lg visible-lg-block"></div>')
+            }
         },
 
         /**
@@ -116,7 +148,7 @@ const ResponsiveBootstrapToolkit = (($) => {
         applyDetectionDivs: () => {
             $(document).ready(() => {
                 $.each(self.breakpoints, (alias) => {
-                    self.breakpoints[alias].appendTo('.responsive-bootstrap-toolkit');
+                    self.breakpoints[alias].appendTo('.responsive-toolkit');
                 });
             });
         },
@@ -242,16 +274,16 @@ const ResponsiveBootstrapToolkit = (($) => {
 
     // Create a placeholder
     $(document).ready(() => {
-        $('<div class="responsive-bootstrap-toolkit"></div>').appendTo('body');
+        $('<div class="responsive-toolkit"></div>').appendTo('body');
     });
 
     if (self.framework === null) {
-        self.use('myFramework');
+        self.use('default');
     }
 
     return self;
 })(jQuery);
 
 if(typeof module !== 'undefined' && module.exports) { // jshint ignore:line
-    module.exports = ResponsiveBootstrapToolkit; // jshint ignore:line
+    module.exports = ResponsiveToolkit; // jshint ignore:line
 }
