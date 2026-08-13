@@ -51,6 +51,7 @@ Section Order:
 ### Changed
 
 - Updated to the latest modernized version of Responsive Toolkit
+- Masonry behaviour refined
 
 ## [0.0.1.20260809] - 2026-08-09
 

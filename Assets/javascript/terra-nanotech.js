@@ -56,18 +56,23 @@
             $('<div class="blur-background"></div>').prependTo('body');
         };
 
+        /**
+         * Initialize Masonry layout for blog, search, and archive pages.
+         */
         const initMasonry = () => {
             const grid = document.querySelector(
                 'body.blog .site-main, body.search .site-main, body.archive .site-main'
             );
             const articles = grid ? grid.querySelectorAll('article') : [];
 
+            // Only initialize Masonry if there are multiple articles to display
+            if (grid && articles.length > 1) {
+                articles.forEach(article => article.classList.add('masonry-item'));
 
-            if (grid && articles.length > 0) {
                 const msnry = new Masonry(grid, { // eslint-disable-line no-unused-vars
-                    columnWidth: 'article',
+                    columnWidth: '.masonry-item',
                     gutter: 20,
-                    itemSelector: 'article',
+                    itemSelector: '.masonry-item',
                     maxColumnHeightDifference: 1,
                     percentPosition: true,
                     stamp: '.site-main .page-header'
@@ -82,6 +87,9 @@
             externalLinks();
         });
 
+        /**
+         * Detect the current device type based on the viewport size.
+         */
         const getDevice = () => (
             ['xs', 'sm'].includes(viewport.current()) ? 'mobile' : 'desktop'
         );
@@ -90,6 +98,11 @@
 
         let activeDevice = null;
 
+        /**
+         * Fix the sticky menu based on the current device type.
+         *
+         * @param {string} device - The current device type ('desktop' or 'mobile').
+         */
         const fixStickyMenu = (device) => {
             const $siteHeader = $('header.site-header');
 
@@ -105,6 +118,11 @@
             }
         };
 
+        /**
+         * Synchronize the sticky menu based on the current device type.
+         * This function checks the current device type and updates the sticky menu accordingly.
+         * It only reconfigures the sticky menu when the device mode actually changes.
+         */
         const syncStickyMenu = () => {
             const nextDevice = getDevice();
 
