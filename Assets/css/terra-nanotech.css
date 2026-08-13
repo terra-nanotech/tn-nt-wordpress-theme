@@ -10,10 +10,10 @@
         &.archive .site-content,
         &.blog .site-content,
         &.search .site-content {
-            .site-main:has(article) {
+            .site-main:has(article.masonry-item) {
                 margin-bottom: 107px;
 
-                article {
+                article.masonry-item {
                     width: 100%;
                 }
 
@@ -142,7 +142,7 @@
     }
 }
 
-/* Stiky Header
+/* Sticky Header
 ------------------------------------------------------------------------------------- */
 @media all {
     .is-sticky .site-header {
@@ -173,10 +173,10 @@
         &.archive .site-content,
         &.blog .site-content,
         &.search .site-content {
-            .site-main:has(article) {
+            .site-main:has(article.masonry-item + article.masonry-item) {
                 margin-bottom: 86px;
 
-                article {
+                article.masonry-item {
                     width: calc((100% / 2) - 11px);
                 }
 
@@ -187,9 +187,9 @@
 
             /* Adjust for the presence of a widget area */
             &:has(.widget-area) {
-                .site-main:has(article) {
-                    article {
-                        width: calc((100% / 2) - 10.0001px);
+                .site-main:has(article.masonry-item + article.masonry-item) {
+                    article.masonry-item {
+                        width: calc((100% / 2) - 10.0001px) !important;
                     }
                 }
 
@@ -214,11 +214,11 @@
         &.archive .site-content,
         &.blog .site-content,
         &.search .site-content {
-            .site-main:has(article) {
+            .site-main:has(article.masonry-item + article.masonry-item + article.masonry-item) {
                 margin-bottom: 88px;
 
-                article {
-                    width: calc((100% / 3) - 13.0001px);
+                article.masonry-item {
+                    width: calc((100% / 3) - 13.5px);
                 }
 
                 .paging-navigation {
@@ -228,9 +228,9 @@
 
             /* Adjust for the presence of a widget area */
             &:has(.widget-area) {
-                .site-main:has(article) {
-                    article {
-                        width: calc((100% / 2) - 10.0001px);
+                .site-main:has(article.masonry-item + article.masonry-item) {
+                    article.masonry-item {
+                        width: calc((100% / 2) - 10.0001px) !important;
                     }
                 }
             }
