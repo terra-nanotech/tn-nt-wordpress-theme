@@ -187,12 +187,6 @@
 
             /* Adjust for the presence of a widget area */
             &:has(.widget-area) {
-                .site-main:has(article.masonry-item + article.masonry-item) {
-                    article.masonry-item {
-                        width: calc((100% / 2) - 10.0001px) !important;
-                    }
-                }
-
                 .widget-area {
                     margin-top: 0;
                 }
@@ -214,23 +208,17 @@
         &.archive .site-content,
         &.blog .site-content,
         &.search .site-content {
-            .site-main:has(article.masonry-item + article.masonry-item + article.masonry-item) {
-                margin-bottom: 88px;
+            /* Only apply the 3-column layout if there is no widget area present */
+            &:not(:has(.widget-area)) {
+                .site-main:has(article.masonry-item + article.masonry-item + article.masonry-item) {
+                    margin-bottom: 88px;
 
-                article.masonry-item {
-                    width: calc((100% / 3) - 13.5px);
-                }
-
-                .paging-navigation {
-                    bottom: -69px;
-                }
-            }
-
-            /* Adjust for the presence of a widget area */
-            &:has(.widget-area) {
-                .site-main:has(article.masonry-item + article.masonry-item) {
                     article.masonry-item {
-                        width: calc((100% / 2) - 10.0001px) !important;
+                        width: calc((100% / 3) - 13.5px);
+                    }
+
+                    .paging-navigation {
+                        bottom: -69px;
                     }
                 }
             }

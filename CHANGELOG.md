@@ -50,6 +50,7 @@ Section Order:
 
 ### Changed
 
+- Column logic simplified
 - Updated to the latest modernized version of Responsive Toolkit
 - Masonry behaviour refined
 
