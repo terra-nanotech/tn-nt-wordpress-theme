@@ -6,6 +6,7 @@
     $(document).ready(() => {
         /**
          * Extend links to external website.
+         *
          * » add target="_blank"
          * » add referrerpolicy="no-referrer"
          * » add rel="noopener noreferrer"
@@ -25,7 +26,7 @@
                 // Check if it's an HTTP link
                 if (protocolPattern.test(href)) {
                     // Get the hostname of the link
-                    const hrefHostname = $(new URL(href)).attr('hostname');
+                    const hrefHostname = new URL(href).hostname;
 
                     // Check if the hostname is not in the internalHost array or if the link has the class 'external-link',
                     // and add the target and classes and attributes to the link element.
