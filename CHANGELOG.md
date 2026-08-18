@@ -48,6 +48,8 @@ Section Order:
 
 <!-- Your changes go here -->
 
+## [1.0.0] - 2026-08-18
+
 ### Changed
 
 - StickyJS updated to v0.2.0
@@ -131,7 +133,7 @@ Section Order:
 
 ### Changed
 
-- External link detection to be also triggered bei CSS class `external-link`
+- External link detection to be also triggered by CSS class `external-link`
 
 ## [0.0.1.20260729.1] - 2026-07-29
 
@@ -156,6 +158,7 @@ Section Order:
 [0.0.1.20260803]: https://github.com/terra-nanotech/tn-nt-wordpress-theme/compare/v0.0.1.20260730...v0.0.1.20260803 "v0.0.1.20260803"
 [0.0.1.20260808]: https://github.com/terra-nanotech/tn-nt-wordpress-theme/compare/v0.0.1.20260803...v0.0.1.20260808 "v0.0.1.20260808"
 [0.0.1.20260809]: https://github.com/terra-nanotech/tn-nt-wordpress-theme/compare/v0.0.1.20260808...v0.0.1.20260809 "v0.0.1.20260809"
-[in development]: https://github.com/terra-nanotech/tn-nt-wordpress-theme/compare/v0.0.1.20260809...HEAD "In Development"
+[1.0.0]: https://github.com/terra-nanotech/tn-nt-wordpress-theme/compare/v0.0.1.20260809...v1.0.0 "v1.0.0"
+[in development]: https://github.com/terra-nanotech/tn-nt-wordpress-theme/compare/v1.0.0...HEAD "In Development"
 [keep a changelog]: http://keepachangelog.com/ "Keep a Changelog"
 [semantic versioning]: http://semver.org/ "Semantic Versioning"

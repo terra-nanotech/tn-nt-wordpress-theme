@@ -1,7 +1,7 @@
 {
     "author": "Peter Pfeufer",
     "name": "@terra-nanotech/terra-nanotech",
-    "version": "0.0.1.20260809",
+    "version": "1.0.0",
     "description": "WordPress Theme for the Terra Nanotech website",
     "license": "GPL-3.0-or-later",
     "type": "module",
