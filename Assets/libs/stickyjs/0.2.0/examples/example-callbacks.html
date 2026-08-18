@@ -11,11 +11,35 @@
                     topSpacing: 0,
                     center: true,
                     callback: {
-                        onStick: () => {
-                            console.log('Element has become sticky.');
+                        onStick: element => {
+                            const domElement = element && element.jquery ? element[0] : element;
+
+                            console.log('Dom Element:', domElement);
+                            console.log(`Element #${domElement.id} has become sticky.`);
                         },
-                        onUnstick: () => {
-                            console.log('Element is no longer sticky.');
+                        onUnstick: element => {
+                            const domElement = element && element.jquery ? element[0] : element;
+
+                            console.log('Dom Element:', domElement);
+                            console.log(`Element #${domElement.id} is no longer sticky.`);
+                        },
+                        onUpdate: element => {
+                            const domElement = element && element.jquery ? element[0] : element;
+
+                            console.log('Dom Element:', domElement);
+                            console.log(`Element #${domElement.id} has been updated.`);
+                        },
+                        onBottomReached: element => {
+                            const domElement = element && element.jquery ? element[0] : element;
+
+                            console.log('Dom Element:', domElement);
+                            console.log(`Element #${domElement.id} has reached the bottom.`);
+                        },
+                        onBottomUnreached: element => {
+                            const domElement = element && element.jquery ? element[0] : element;
+
+                            console.log('Dom Element:', domElement);
+                            console.log(`Element #${domElement.id} has left the bottom.`);
                         }
                     }
                 });
