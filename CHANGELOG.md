@@ -50,7 +50,7 @@ Section Order:
 
 ### Changed
 
-- StickyJS updated to v0.1.0
+- StickyJS updated to v0.2.0
 - Column logic simplified
 - Updated to the latest modernized version of Responsive Toolkit
 - Masonry behaviour refined
