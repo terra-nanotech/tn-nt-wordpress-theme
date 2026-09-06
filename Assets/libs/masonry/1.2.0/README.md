@@ -29,7 +29,12 @@ wall. You've probably seen it in use all over the Internet.
 
 ### Download<a name="download"></a>
 
-Download the latest release from [GitHub](https://github.com/ppfeufer/masonry/releases/download/latest/masonry.zip).
+Download the latest version of Masonry from [GitHub](https://github.com/ppfeufer/masonry/releases/latest/download/masonry.zip).
+
+> [!IMPORTANT]
+>
+> Do not use the JS file from the `src` folder, as this is the development version and can be unstable and buggy. \
+> Use only the JS files from the `dist` folder, which is included in the release archives.
 
 ## Usage<a name="usage"></a>
 
@@ -75,15 +80,14 @@ Add a `data-masonry` attribute to your element. Options can be set in JSON in th
 
 ## Development<a name="development"></a>
 
-To rebuild the distributable files in `dist/` from the current `masonry.js` source and its bundled browser dependencies, run:
+To install the Node.js dependencies for development, run:
 
 ```bash
 npm install
-npm run build
 ```
 
-This will:
+To build the development version of Masonry, run:
 
-- create `dist/masonry.js` by concatenating the required browser-ready dependency files and the local `masonry.js`
-- create `dist/masonry.min.js`
-- create `dist/masonry.min.js.map`
+```bash
+npm run build:dev
+```
