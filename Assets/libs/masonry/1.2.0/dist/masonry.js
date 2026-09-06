@@ -3,10 +3,10 @@
 /*!
  * Masonry Plugin for jQuery (modernized fork by Peter Pfeufer)
  *
- * @version 0.0.2
+ * @version 1.2.0
  * @author Peter Pfeufer
  * @license GPL-3.0 or later
- * @link https://github.com/ppfeufer/stickyjs
+ * @link https://github.com/ppfeufer/masonry
  *
  * Description: Cascading grid layout library
  *
@@ -14,6 +14,22 @@
  * Author: David DeSandro
  * GitHub: https://github.com/desandro/masonry
  */
+
+((globalObject) => {
+    'use strict';
+
+    if (globalObject.__ppfeuferMasonryLoaded__) {
+        console.warn('Masonry bundle already loaded. Skipping duplicate load.');
+
+        return;
+    }
+
+    Object.defineProperty(globalObject, '__ppfeuferMasonryLoaded__', {
+        configurable: false,
+        enumerable: false,
+        value: true,
+        writable: false
+    });
 
 /**
  * Bridget makes jQuery widgets
@@ -2171,6 +2187,12 @@ return Outlayer;
             window.Outlayer,
             window.getSize
         );
+
+        // Automatically register as a jQuery plugin when both jQuery and
+        // jQueryBridget are available (bundled or loaded independently).
+        if (typeof window.jQueryBridget === 'function' && typeof window.jQuery === 'function') {
+            window.jQueryBridget('masonry', window.Masonry, window.jQuery);
+        }
     }
 })(window, (Outlayer, getSize) => {
     'use strict';
@@ -2411,3 +2433,4 @@ return Outlayer;
 
     return Masonry;
 });
+})(typeof globalThis !== 'undefined' ? globalThis : window);

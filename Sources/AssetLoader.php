@@ -77,7 +77,7 @@ class AssetLoader {
             ver: THEME_VERSION,
             args: [
                 'in_footer' => true,
-                'strategy' => 'async'
+                'strategy' => 'defer'
             ]
         );
 
@@ -88,18 +88,18 @@ class AssetLoader {
             ver: THEME_VERSION,
             args: [
                 'in_footer' => true,
-                'strategy' => 'async'
+                'strategy' => 'defer'
             ]
         );
 
         wp_enqueue_script(
             handle: 'masonry-layout',
-            src: get_theme_file_uri(file: '/Assets/libs/masonry/0.0.2/dist/masonry.min.js'),
+            src: get_theme_file_uri(file: '/Assets/libs/masonry/1.2.0/dist/masonry.min.js'),
             deps: ['jquery'],
             ver: THEME_VERSION,
             args: [
                 'in_footer' => true,
-                'strategy' => 'async'
+                'strategy' => 'defer'
             ]
         );
 
@@ -110,7 +110,7 @@ class AssetLoader {
             ver: THEME_VERSION,
             args: [
                 'in_footer' => true,
-                'strategy' => 'async'
+                'strategy' => 'defer'
             ]
         );
     }

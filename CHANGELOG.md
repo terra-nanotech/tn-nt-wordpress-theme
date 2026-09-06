@@ -48,6 +48,10 @@ Section Order:
 
 <!-- Your changes go here -->
 
+### Changed
+
+- Masonry JS updated to v1.2.0
+
 ## [1.0.0] - 2026-08-18
 
 ### Changed
