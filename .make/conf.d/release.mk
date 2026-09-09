@@ -16,7 +16,7 @@ prepare-release: pot
 	# Update the version in package.json and rebuild node modules \
 	sed -i -E "\|\"version\"\: |s|\"\: .*|\"\: \"$$new_version\",|g" package.json; \
 	rm -rf node_modules; \
-	rm package-lock.json; \
+#	rm package-lock.json; \
 	npm install; \
 	sed -i -E "\|\* Version\: |s|\: .*|\: $$new_version|g" style.css; \
 	if [[ $$new_version =~ (alpha|beta) ]]; then \
@@ -24,13 +24,13 @@ prepare-release: pot
 		git restore $(TRANSLATION__TEMPLATE); \
 	elif [[ $$new_version =~ rc ]]; then \
 		echo "$(TEXT_COLOR_YELLOW)$(TEXT_BOLD)Release Candidate$(TEXT_RESET) version detected!"; \
-		sed -i "/\"Project-Id-Version: /c\\\"Project-Id-Version: $(GENERAL__NAME_VERBOSE) $$new_version\\\n\"" $(TRANSLATION__TEMPLATE); \
-		sed -i "/\"Report-Msgid-Bugs-To: /c\\\"Report-Msgid-Bugs-To: $(GIT__GIT_REPOSITORY_ISSUES)\\\n\"" $(TRANSLATION__TEMPLATE); \
+		sed -i "/\"Project-Id-Version: /c\\\"Project-Id-Version: $(GENERAL__NAME_VERBOSE)\\\n\"" $(TRANSLATION__TEMPLATE); \
+		sed -i "/\"Report-Msgid-Bugs-To: /c\\\"Report-Msgid-Bugs-To: $(WEBLATE__BASE_URL)/projects/$(WEBLATE__PROJECT_SLUG)/$(WEBLATE__COMPONENT_SLUG)/\\\n\"" $(TRANSLATION__TEMPLATE); \
 	else \
 		echo "$(TEXT_BOLD)Release$(TEXT_BOLD_END) version detected."; \
 		sed -i -E "\|\[in development\]\: |s|\]\: .*|\]\: $(GIT__GIT_REPOSITORY)/compare/v$$new_version...HEAD \"In Development\"|g" CHANGELOG.md; \
-		sed -i "/\"Project-Id-Version: /c\\\"Project-Id-Version: $(GENERAL__NAME_VERBOSE) $$new_version\\\n\"" $(TRANSLATION__TEMPLATE); \
-		sed -i "/\"Report-Msgid-Bugs-To: /c\\\"Report-Msgid-Bugs-To: $(GIT__GIT_REPOSITORY_ISSUES)\\\n\"" $(TRANSLATION__TEMPLATE); \
+		sed -i "/\"Project-Id-Version: /c\\\"Project-Id-Version: $(GENERAL__NAME_VERBOSE)\\\n\"" $(TRANSLATION__TEMPLATE); \
+		sed -i "/\"Report-Msgid-Bugs-To: /c\\\"Report-Msgid-Bugs-To: $(WEBLATE__BASE_URL)/projects/$(WEBLATE__PROJECT_SLUG)/$(WEBLATE__COMPONENT_SLUG)/\\\n\"" $(TRANSLATION__TEMPLATE); \
 	fi;
 
 # Create a new release archive

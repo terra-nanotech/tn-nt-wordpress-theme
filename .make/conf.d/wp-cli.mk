@@ -32,7 +32,7 @@ pot:
 		l10n/$(TRANSLATION__TEXTDOMAIN).pot \
 		--slug=$(TRANSLATION__TEXTDOMAIN) \
 		--domain=$(TRANSLATION__TEXTDOMAIN) \
-		--headers='{"Report-Msgid-Bugs-To":"$(GIT__GIT_REPOSITORY_ISSUES)"}' \
+		--headers='{"Report-Msgid-Bugs-To": "$(WEBLATE__BASE_URL)/projects/$(WEBLATE__PROJECT_SLUG)/$(WEBLATE__COMPONENT_SLUG)/", "Project-Id-Version": "$(GENERAL__NAME_VERBOSE)"}' \
 		--include="/"
 
 # Start the WP-CLI shell
