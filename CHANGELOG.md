@@ -48,9 +48,12 @@ Section Order:
 
 <!-- Your changes go here -->
 
+## [1.0.1] - 2026-09-11
+
 ### Changed
 
 - Masonry JS updated to v1.2.0
+- JS loading strategy from `async` to `defer` to keep the order of execution intact
 
 ## [1.0.0] - 2026-08-18
 
@@ -163,6 +166,7 @@ Section Order:
 [0.0.1.20260808]: https://github.com/terra-nanotech/tn-nt-wordpress-theme/compare/v0.0.1.20260803...v0.0.1.20260808 "v0.0.1.20260808"
 [0.0.1.20260809]: https://github.com/terra-nanotech/tn-nt-wordpress-theme/compare/v0.0.1.20260808...v0.0.1.20260809 "v0.0.1.20260809"
 [1.0.0]: https://github.com/terra-nanotech/tn-nt-wordpress-theme/compare/v0.0.1.20260809...v1.0.0 "v1.0.0"
-[in development]: https://github.com/terra-nanotech/tn-nt-wordpress-theme/compare/v1.0.0...HEAD "In Development"
+[1.0.1]: https://github.com/terra-nanotech/tn-nt-wordpress-theme/compare/v1.0.0...v1.0.1 "v1.0.1"
+[in development]: https://github.com/terra-nanotech/tn-nt-wordpress-theme/compare/v1.0.1...HEAD "In Development"
 [keep a changelog]: http://keepachangelog.com/ "Keep a Changelog"
 [semantic versioning]: http://semver.org/ "Semantic Versioning"

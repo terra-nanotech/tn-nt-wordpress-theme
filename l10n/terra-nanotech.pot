@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-09-09T14:06:06+00:00\n"
+"POT-Creation-Date: 2026-09-11T07:18:14+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: terra-nanotech\n"
@@ -26,7 +26,7 @@ msgstr ""
 
 #. Description of the theme
 #: style.css:4
-msgid "WordPress Theme for the EVE Online corporation Terra Nanotech"
+msgid "WordPress Theme for the EVE Online Corporation Terra Nanotech"
 msgstr ""
 
 #. Author of the theme
