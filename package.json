@@ -1,8 +1,8 @@
 {
     "author": "Peter Pfeufer",
     "name": "@terra-nanotech/terra-nanotech",
-    "version": "1.0.0",
-    "description": "WordPress Theme for the Terra Nanotech website",
+    "version": "1.0.1",
+    "description": "WordPress Theme for the EVE Online Corporation Terra Nanotech",
     "license": "GPL-3.0-or-later",
     "type": "module",
     "devDependencies": {
@@ -13,5 +13,10 @@
         "stylelint": "^17.15.0",
         "stylelint-config-standard": "^40.0.0",
         "terser": "^5.51.2"
+    },
+    "scripts": {
+        "lint:css": "stylelint -f verbose \"**/*.css\" --config .stylelintrc.json --ignore-pattern '**/*.min.css' --ignore-pattern 'vendor/**' --ignore-pattern 'Sources/Libs/**' --ignore-pattern 'Assets/libs/**'",
+        "lint:js": "eslint --config eslint.config.js --ext js --ignore-pattern '**/*.min.js' --ignore-pattern 'vendor/**' --ignore-pattern 'Sources/Libs/**' --ignore-pattern 'Assets/libs/**' --debug",
+        "lint": "npm run lint:css && npm run lint:js"
     }
 }

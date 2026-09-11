@@ -1,3 +1,5 @@
+CURRENT_RELEASE_VERSION := $(shell sed -nE 's/^ \* Version: *//p' style.css | head -n 1)
+
 # Prepare a new release
 # Update the graph of the models, translation files and the version in the package
 .PHONY: prepare-release
@@ -36,8 +38,8 @@ prepare-release: pot
 # Create a new release archive
 .PHONY: release-archive
 release-archive:
-	@echo "Creating a new release archive …"
-	@rm -f $(TRANSLATION__TEXTDOMAIN).zip
+	@echo "Creating a new release archive $(TRANSLATION__TEXTDOMAIN)-$(CURRENT_RELEASE_VERSION).zip…"
+#	@rm -f $(TRANSLATION__TEXTDOMAIN)-*.zip
 	@rm -rf $(TRANSLATION__TEXTDOMAIN)/
 	@rsync \
 		-ax \
@@ -46,7 +48,7 @@ release-archive:
 		$(TRANSLATION__TEXTDOMAIN)/
 	@zip \
 		-r \
-		$(TRANSLATION__TEXTDOMAIN).zip \
+		$(TRANSLATION__TEXTDOMAIN)-$(CURRENT_RELEASE_VERSION).zip \
 		$(TRANSLATION__TEXTDOMAIN)/
 	@rm -rf $(TRANSLATION__TEXTDOMAIN)/
 
@@ -56,6 +58,6 @@ help::
 	@echo "  $(TEXT_UNDERLINE)Release:$(TEXT_UNDERLINE_END)"
 	@echo "    prepare-release           Prepare a new release."
 	@echo "    release-archive           Create a release archive."
-	@echo "                              The release archive ($(TRANSLATION__TEXTDOMAIN).zip) will be created in the root"
+	@echo "                              The release archive ($(TRANSLATION__TEXTDOMAIN)-$(CURRENT_RELEASE_VERSION).zip) will be created in the root"
 	@echo "                              directory of the theme."
 	@echo ""
