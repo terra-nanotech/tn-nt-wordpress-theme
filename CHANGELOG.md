@@ -48,6 +48,10 @@ Section Order:
 
 <!-- Your changes go here -->
 
+### Fixed
+
+- Background for MetaSlider slides
+
 ## [1.0.1] - 2026-09-11
 
 ### Changed
