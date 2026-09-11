@@ -29,5 +29,7 @@ CHANGELOG.md export-ignore
 eslint.config.js export-ignore
 Makefile export-ignore
 CODEOWNERS export-ignore
+CODE_OF_CONDUCT.md export-ignore
+CONTRIBUTING.md export-ignore
 style.min.css export-ignore
 style.min.css.map export-ignore

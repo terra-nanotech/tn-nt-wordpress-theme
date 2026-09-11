@@ -19,6 +19,8 @@ Makefile
 README.md
 CHANGELOG.md
 CODEOWNERS
+CODE_OF_CONDUCT.md
+CONTRIBUTING.md
 *.zip
 /vendor
 .make
