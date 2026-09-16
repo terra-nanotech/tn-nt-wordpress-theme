@@ -7,15 +7,6 @@ SHELL := /bin/bash
 # Default goal and help message for the Makefile
 .DEFAULT_GOAL := help
 
-# Theme information
-#theme_name = Terra Nanotech WordPress Theme
-#theme_slug = terra-nanotech
-#text-domain = terra-nanotech
-
-# Git repository URLs
-#theme_repo_url = https://github.com/terra-nanotech/tn-nt-wordpress-theme
-#theme_issues_url = $(theme_repo_url)/issues
-
 # Base config file that should always exist
 ConfigFile := .make/config.ini
 # Optional override config file that may or may not exist, allowing for specific overrides
@@ -120,7 +111,7 @@ show-parsed-config-files:
 # Help message for the Makefile
 .PHONY: help
 help::
-	@echo "$(TEXT_BOLD)$(theme_name)$(TEXT_BOLD_END) Makefile"
+	@echo "$(TEXT_BOLD)$(GENERAL__NAME_VERBOSE)$(TEXT_BOLD_END) Makefile"
 	@echo ""
 	@echo "$(TEXT_BOLD)Usage:$(TEXT_BOLD_END)"
 	@echo "  make [command]"
