@@ -1,6 +1,12 @@
-/node_modules*
-/vendor*
+# Directories
+/node_modules/
+/vendor/
+
+# Files
 /terra-nanotech*.zip
-/style.min.css
-/style.min.css.map
 /.make/config-overrides.ini
+
+/*.min.css
+/*.min.css.map
+/*.min.js
+/*.min.js.map

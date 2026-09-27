@@ -31,5 +31,7 @@ Makefile export-ignore
 CODEOWNERS export-ignore
 CODE_OF_CONDUCT.md export-ignore
 CONTRIBUTING.md export-ignore
-style.min.css export-ignore
-style.min.css.map export-ignore
+/*.min.css export-ignore
+/*.min.css.map export-ignore
+/*.min.js export-ignore
+/*.min.js.map export-ignore
