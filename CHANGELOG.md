@@ -48,12 +48,15 @@ Section Order:
 
 <!-- Your changes go here -->
 
+## [1.1.0] - 2026-10-08
+
 ### Added
 
 - External link marker for links that open in a new tab/window
 
 ### Fixed
 
+- Unexpected Token JS error
 - Background for MetaSlider slides
 
 ## [1.0.1] - 2026-09-11
@@ -175,6 +178,7 @@ Section Order:
 [0.0.1.20260809]: https://github.com/terra-nanotech/tn-nt-wordpress-theme/compare/v0.0.1.20260808...v0.0.1.20260809 "v0.0.1.20260809"
 [1.0.0]: https://github.com/terra-nanotech/tn-nt-wordpress-theme/compare/v0.0.1.20260809...v1.0.0 "v1.0.0"
 [1.0.1]: https://github.com/terra-nanotech/tn-nt-wordpress-theme/compare/v1.0.0...v1.0.1 "v1.0.1"
-[in development]: https://github.com/terra-nanotech/tn-nt-wordpress-theme/compare/v1.0.1...HEAD "In Development"
+[1.1.0]: https://github.com/terra-nanotech/tn-nt-wordpress-theme/compare/v1.0.1...v1.1.0 "v1.1.0"
+[in development]: https://github.com/terra-nanotech/tn-nt-wordpress-theme/compare/v1.1.0...HEAD "In Development"
 [keep a changelog]: http://keepachangelog.com/ "Keep a Changelog"
 [semantic versioning]: http://semver.org/ "Semantic Versioning"
