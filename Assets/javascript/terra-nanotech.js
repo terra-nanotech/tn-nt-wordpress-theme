@@ -59,7 +59,7 @@
          * Inject a blurred background to the body.
          */
         const injectBlurBodyBackground = () => {
-            $('<div class="blur-background"></div>').prependTo('body');
+            $('body').prepend('<div class="blur-background"></div>');
         };
 
         /**
