@@ -45,6 +45,11 @@
                         $(element).attr('target', '_blank');
                         $(element).attr('rel', 'noopener noreferrer');
                         $(element).attr('referrerpolicy', 'no-referrer');
+
+                        // Add a visual indicator for external links, if the link does not already have one.
+                        if (!$(element).find('.external-link-indicator').length) {
+                            $(element).append('<sup class="external-link-indicator" aria-hidden="true"><svg><use href="#fa-arrow-up-right-from-square"></use></svg></sup>');
+                        }
                     }
                 }
             });
