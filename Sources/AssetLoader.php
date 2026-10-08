@@ -27,7 +27,7 @@ class AssetLoader {
             hook_name: 'admin_enqueue_scripts',
             callback: [$this, 'loadAdminStyles']
         );
-//        add_action(hook_name: 'wp_footer', callback: [$this, 'loadSvgSprite']);
+        add_action(hook_name: 'wp_footer', callback: [$this, 'loadSvgSprite']);
     }
 
     /**
@@ -135,11 +135,11 @@ class AssetLoader {
      * @return void
      * @access public
      */
-//    public function loadSvgSprite(): void {
-//        $svg_sprite = file_get_contents(
-//            filename: get_theme_file_path(file: 'Assets/images/sprite.svg')
-//        );
-//
-//        echo '<div class="svg-sprite">' . $svg_sprite . '</div>';
-//    }
+    public function loadSvgSprite(): void {
+        $svg_sprite = file_get_contents(
+            filename: get_theme_file_path(file: 'Assets/images/sprite.svg')
+        );
+
+        echo '<div class="svg-sprite">' . $svg_sprite . '</div>';
+    }
 }
